@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Ihram Guide | Sacred Pilgrimage Garments & Rules</title>
+    <meta name="description"
+        content="Complete guide to Ihram for Hajj and Umrah: definition, when to wear, wajibat, sunnah, essential rules, and forbidden acts.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fefaf5;
+            font-family: system-ui, 'Segoe UI', 'Roboto', 'Noto Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.5;
+            color: #1e2a2f;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 2rem;
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .guide-header {
+            background: linear-gradient(135deg, #0a3a2e 0%, #1b5e4a 100%);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            color: white;
+            border-bottom: 5px solid #e9b35f;
+        }
+
+        .guide-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .guide-header h1 span {
+            background: rgba(255, 255, 240, 0.2);
+            padding: 0.2rem 0.8rem;
+            border-radius: 40px;
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
+
+        .subhead {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 650px;
+            margin: 0.75rem auto 0;
+            border-top: 1px solid rgba(255, 255, 210, 0.3);
+            display: inline-block;
+            padding-top: 0.75rem;
+        }
+
+        .content-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+            padding: 2rem 2rem 2.5rem 2rem;
+            background: #ffffff;
+        }
+
+        .guide-card {
+            background: #fffef9;
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #f0e7da;
+            overflow: hidden;
+        }
+
+        .guide-card:hover {
+            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.12);
+            transform: translateY(-2px);
+        }
+
+        .card-header {
+            background: #fdf7ef;
+            padding: 1rem 1.75rem;
+            border-bottom: 2px solid #e9dccd;
+            display: flex;
+            align-items: baseline;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .card-header h2 {
+            font-size: 1.65rem;
+            font-weight: 600;
+            color: #2b5a48;
+            letter-spacing: -0.2px;
+        }
+
+        .card-header .id-badge {
+            background: #e9b35f20;
+            color: #a0671e;
+            font-weight: 500;
+            font-size: 0.85rem;
+            padding: 0.25rem 0.8rem;
+            border-radius: 40px;
+            border: 1px solid #e9b35f40;
+        }
+
+        .card-body {
+            padding: 1.5rem 1.75rem;
+        }
+
+        .detail-text {
+            font-size: 1rem;
+            color: #2c3e3a;
+            line-height: 1.6;
+        }
+
+        .detail-text p {
+            margin-bottom: 1rem;
+        }
+
+        .detail-text strong,
+        .detail-text b {
+            color: #8b5a2b;
+            font-weight: 600;
+        }
+
+        .rules-list,
+        .forbidden-list,
+        .sunnah-list,
+        .wajibat-list {
+            margin: 0.75rem 0 0 1.25rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 0.5rem 1rem;
+        }
+
+        .rules-list li,
+        .forbidden-list li,
+        .sunnah-list li,
+        .wajibat-list li {
+            margin-bottom: 0.35rem;
+            list-style-type: none;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .rules-list li::before,
+        .forbidden-list li::before {
+            content: "•";
+            color: #c28a3e;
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: -0.05rem;
+        }
+
+        .sunnah-list li::before {
+            content: "★";
+            color: #e2a13c;
+            font-size: 0.9rem;
+            position: absolute;
+            left: 0;
+            top: 0.1rem;
+        }
+
+        .wajibat-list li::before {
+            content: "⚬";
+            color: #2b7a5c;
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+        }
+
+        .note-box {
+            background: #f9f3e9;
+            padding: 1rem 1.4rem;
+            border-radius: 1rem;
+            margin-top: 1.2rem;
+            border-left: 5px solid #e9b35f;
+            font-size: 0.95rem;
+        }
+
+        hr {
+            margin: 1rem 0;
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, #e2d4c4, transparent);
+        }
+
+        footer {
+            background: #f9f4ec;
+            text-align: center;
+            padding: 1.25rem;
+            font-size: 0.85rem;
+            color: #5d6e66;
+            border-top: 1px solid #e9dccd;
+        }
+
+        @media (max-width: 680px) {
+            .content-grid {
+                padding: 1.25rem;
+            }
+
+            .card-header h2 {
+                font-size: 1.35rem;
+            }
+
+            .card-body {
+                padding: 1.2rem;
+            }
+
+            .guide-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .rules-list,
+            .forbidden-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="guide-header">
+            <h1>
+                🤍 IHRAM GUIDE
+                <span>إحرام</span>
+            </h1>
+            <div class="subhead">Sacred state · Garments of purity · For Hajj & Umrah</div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Card 1: What is Ihram -->
+            <div class="guide-card">
+                <div class="card-header">
+                    <h2>1. What is Ihram</h2>
+                    <span class="id-badge">#1</span>
+                </div>
+                <div class="card-body">
+                    <div class="detail-text">
+                        <p>The dress worn by pilgrims is known as Ihram and generally consists of two white sheets.</p>
+                        <p>The larger sheet is used to cover the body from ankles to the navel.</p>
+                        <p>The other sheet must be draped around the shoulders.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: When Ihram Is Worn? -->
+            <div class="guide-card">
+                <div class="card-header">
+                    <h2>2. When Ihram Is Worn?</h2>
+                    <span class="id-badge">#2</span>
+                </div>
+                <div class="card-body">
+                    <div class="detail-text">
+                        <p>Ihram is worn by pilgrims while performing Hajj or Umraah.</p>
+                        <p>It is mandatory for the pilgrims to wear Ihram at the place of Meqaat near Mecca in order to
+                            continue their pilgrimage.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Wajibat and Sunnah (structured lists) -->
+            <div class="guide-card">
+                <div class="card-header">
+                    <h2>3. Wajibat and Sunnah</h2>
+                    <span class="id-badge">#3</span>
+                </div>
+                <div class="card-body">
+                    <div class="detail-text">
+                        <div style="margin-bottom: 1.5rem;">
+                            <strong style="font-size:1.1rem; color:#2b5a48;">⚡ Wajibat of Ihram (Obligations)</strong>
+                            <ul class="wajibat-list">
+                                <li>Going in state of Ihram and wearing Ihram at Meqaat</li>
+                                <li>Restrain from the things that are prohibited in Ihram</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong style="font-size:1.1rem; color:#2b5a48;">✨ Sunnahs of Ihram (Recommended
+                                Acts)</strong>
+                            <ul class="sunnah-list">
+                                <li>Performing ablution or ghusl</li>
+                                <li>Applying it before making Niyyah for Ihram or either Hajj or Ummrah</li>
+                                <li>Using two sheets as Ihram dress</li>
+                                <li>Performing two Rakat of Sunnah of Ihram</li>
+                                <li>Recitation of Talbiyah</li>
+                                <li>Reciting loudly</li>
+                                <li>Reciting thrice</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Rules of Ihram -->
+            <div class="guide-card">
+                <div class="card-header">
+                    <h2>4. Rules of Ihram</h2>
+                    <span class="id-badge">#4</span>
+                </div>
+                <div class="card-body">
+                    <div class="detail-text">
+                        <ul class="rules-list">
+                            <li>Talbiyah must be said together with Niyyah for completion of ihram.</li>
+                            <li>It is obligatory to recite talabiyah aloud for once</li>
+                            <li>Talabivah can be said in minor or major impurity</li>
+                            <li>The ghusl done in either day or night suffices for the rest of the day of ihram</li>
+                            <li>The pilgrim can take off and replace the ihram during the pilgrimage</li>
+                        </ul>
+                        <div class="note-box">
+                            📘 <strong>Note:</strong> Talbiyah recitation, ghusl validity, and the flexibility of
+                            removing or replacing Ihram garments are key aspects. Pilgrims may change ihram garments if
+                            needed while maintaining the sacred state.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: Things Forbidden in Ihram (complete list from JSON) -->
+            <div class="guide-card">
+                <div class="card-header">
+                    <h2>5. Things Forbidden in Ihram</h2>
+                    <span class="id-badge">#5</span>
+                </div>
+                <div class="card-body">
+                    <div class="detail-text">
+                        <strong style="display:block; margin-bottom:12px; font-size:1.1rem;">🚫 Prohibited acts &
+                            substances during Ihram</strong>
+                        <ul class="forbidden-list">
+                            <li>Hunting of land animals</li>
+                            <li>Kissing a woman</li>
+                            <li>Sexual intercourse</li>
+                            <li>Touching a woman</li>
+                            <li>Indulging in fore-play</li>
+                            <li>Marriage</li>
+                            <li>Masturbation</li>
+                            <li>Use of perfume</li>
+                            <li>Wearing sewn clothes (only for men)</li>
+                            <li>Wearing socks or shoes (only for men)</li>
+                            <li>Covering the head (only for men)</li>
+                            <li>Shading from rain or sun (only for men)</li>
+                            <li>Looking in the miror</li>
+                            <li>Application of kohl on eyes</li>
+                            <li>Quarreling</li>
+                            <li>Cursing</li>
+                            <li>Killing of insects on one's body</li>
+                            <li>Application of oil on body</li>
+                            <li>Use of cosmetics</li>
+                            <li>Shaving bodily hair</li>
+                            <li>Covering of face (for women)</li>
+                            <li>Causing the flow of blood out from body</li>
+                            <li>Pulling out of teeth</li>
+                            <li>Clipping nails</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <span>📿 Based on authentic Fiqh rulings | Ihram essentials for pilgrims</span><br>
+            <span style="font-size:0.75rem;">Meqaat · Talbiyah · Prohibitions & obligations</span>
+        </footer>
+    </div>
+</body>
+
+</html>

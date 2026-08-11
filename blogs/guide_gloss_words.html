@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Glossary of Hajj & Umrah | Islamic Terms Dictionary</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #faf7f0;
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', 'Georgia', serif;
+            color: #1e2a2e;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+
+        /* main container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* header section */
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            border-bottom: 2px solid #d4af7a;
+            padding-bottom: 1.5rem;
+        }
+
+        .header h1 {
+            font-size: 2.6rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            color: #2c3e2f;
+            background: linear-gradient(135deg, #2a6b3c, #b87c2e);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .header .sub {
+            font-size: 1.1rem;
+            color: #5a4a2e;
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+
+        .badge-count {
+            display: inline-block;
+            background: #e9dbc4;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #4a3a22;
+            margin-top: 0.75rem;
+        }
+
+        /* filter / quick info bar (no js, just static visual) */
+        .info-bar {
+            background: #fff6ea;
+            border-radius: 28px;
+            padding: 0.9rem 1.8rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #eedcbb;
+        }
+
+        .info-text {
+            font-size: 0.95rem;
+            color: #5c4b2c;
+        }
+
+        .info-text strong {
+            color: #b4652a;
+            font-weight: 700;
+        }
+
+        .info-note {
+            background: #f1e8db;
+            padding: 0.3rem 0.9rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: #4f3f24;
+        }
+
+        /* glossary grid — responsive cards */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.6rem;
+        }
+
+        /* card style */
+        .term-card {
+            background: #ffffff;
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.2s ease;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f0e2ce;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .term-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 28px -12px rgba(0, 0, 0, 0.12);
+            border-color: #dbbc8c;
+        }
+
+        .card-header {
+            background: #fef6ed;
+            padding: 1.2rem 1.5rem 0.6rem 1.5rem;
+            border-bottom: 1px solid #f0e0ca;
+        }
+
+        .term-title {
+            font-size: 1.65rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            color: #8b5a2b;
+            display: inline-block;
+            border-left: 5px solid #c28a40;
+            padding-left: 0.8rem;
+            margin-bottom: 0.3rem;
+            word-break: break-word;
+        }
+
+        .term-id {
+            font-size: 0.7rem;
+            font-weight: normal;
+            background: #e9e0d0;
+            display: inline-block;
+            padding: 0.15rem 0.55rem;
+            border-radius: 20px;
+            margin-left: 0.6rem;
+            vertical-align: middle;
+            color: #5f4c2b;
+        }
+
+        .card-body {
+            padding: 1.2rem 1.5rem 1.5rem 1.5rem;
+            flex: 1;
+        }
+
+        .term-detail {
+            font-size: 0.98rem;
+            color: #2d3e3f;
+            line-height: 1.55;
+            text-align: justify;
+        }
+
+        .term-detail p {
+            margin-top: 0;
+        }
+
+        /* arabic / inline highlights */
+        .highlight {
+            background: #fff0df;
+            font-weight: 500;
+            padding: 0 0.2rem;
+            border-radius: 8px;
+            color: #b45f2a;
+        }
+
+        .quote-mark {
+            font-style: italic;
+            color: #7a5a3a;
+        }
+
+        hr {
+            margin: 2rem 0 1rem;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #e2d2ba, transparent);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 0.8rem;
+            color: #8f7a5a;
+            border-top: 1px solid #e3d5c0;
+            padding-top: 2rem;
+        }
+
+        /* responsive adjustments */
+        @media (max-width: 720px) {
+            body {
+                padding: 1rem;
+            }
+
+            .header h1 {
+                font-size: 1.9rem;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+
+            .term-title {
+                font-size: 1.4rem;
+            }
+
+            .info-bar {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: flex-start;
+            }
+        }
+
+        /* special styling for arabic terms */
+        .arabic-badge {
+            font-family: 'Segoe UI', 'Amiri', 'Traditional Arabic', serif;
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📖 The Sacred Pilgrimage Lexicon</h1>
+            <div class="sub">Hajj & Umrah — Terms, Rituals & Spiritual Meanings</div>
+            <div class="badge-count">✨ 69 essential entries from classical sources</div>
+        </div>
+
+        <div class="info-bar">
+            <div class="info-text">
+                🕋 <strong>Comprehensive reference</strong> — from <strong>Adhan</strong> to <strong>Zamzam</strong><br>
+                Includes rites: <em>Ifrad, Qiran, Tamattu‘, Tawaf, Rami, Waqfah</em> and more.
+            </div>
+            <div class="info-note">
+                📜 Based on authentic Islamic tradition
+            </div>
+        </div>
+
+        <!-- glossary cards grid : static content generated from provided JSON data -->
+        <div class="glossary-grid">
+            <!-- Adhan -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Adhan <span class="term-id">#1</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The call to Prayer (salah), usually issued from the minaret of a mosque.
+                    </div>
+                </div>
+            </div>
+            <!-- Arafah or Arafat -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Arafah / Arafat <span class="term-id">#2</span></span>
+                </div>
+                <div class="card-body">
+                    <div class="term-detail">A desert location approximately 14.5 km (9 miles) east of Makkah where the
+                        pilgrim spends 9 Dhul-Hijjah as a rite of Hajj. The waqfah is performed at `Arafah.</div>
+                </div>
+            </div>
+            <!-- Damm -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Damm <span class="term-id">#3</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">Also known as kaffarah. The atonement required of a pilgrim for a willful
+                        violation of a prohibition or obligation while in the state of ihram.</div>
+                </div>
+            </div>
+            <!-- Day of An-Nahr -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Day of An-Nahr (Yawm An-Nahr) <span
+                            class="term-id">#4</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">This day, 10 Dhul-Hijjah, is designated as the preferred day of sacrifice
+                        during Hajj.</div>
+                </div>
+            </div>
+            <!-- Day of At-Tarwiyah -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Day of At-Tarwiyah <span
+                            class="term-id">#5</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The start of the Hajj, on 8 Dhul-Hijjah. The pilgrim proceeds to Mina on
+                        this day.</div>
+                </div>
+            </div>
+            <!-- Days of Tashreeq -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Days of Tashreeq (Ayyam At-Tashreeq) <span
+                            class="term-id">#6</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">These are 11, 12, and 13 Dhul-Hijjah. On these days, the pilgrim throws
+                        pebbles at the stone pillars, a ritual known as rami, in Mina. The name Tashreeq, related to the
+                        word for sunrise, comes from the practice in the past of drying the meat of the sacrifices in
+                        the sun on those days.</div>
+                </div>
+            </div>
+            <!-- Dhul-Hijjah -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Dhul-Hijjah <span class="term-id">#7</span></span>
+                </div>
+                <div class="card-body">
+                    <div class="term-detail">The last month of the Islamic calendar.</div>
+                </div>
+            </div>
+            <!-- Eid Al-Adha -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Eid Al-Adha <span class="term-id">#8</span></span>
+                </div>
+                <div class="card-body">
+                    <div class="term-detail">"The Islamic public celebration of sacrifice performed on 10 Dhul-Hijjah.
+                        An animal such as a sheep or goat is sacrificed as a commemoration of Prophet Ibrahim's (peace
+                        and blessings be upon him) willingness to sacrifice his son Isma`il for Allah."</div>
+                </div>
+            </div>
+            <!-- Hadi -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Hadi <span class="term-id">#9</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">Hadi is a sacrificial animal immolated in the name of Allah by the pilgrim.
+                        It is to be slaughtered in Al-Haram and distributed among the poor and the needy.</div>
+                </div>
+            </div>
+            <!-- Hajj -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Hajj <span class="term-id">#10</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">One of the five pillars or central duties of Islam. It is a set of acts of
+                        worship to be performed in and around Makkah at least once in a lifetime by every Muslim
+                        satisfying certain conditions. There are three types of Hajj: ifrad, qiran and tamattu` (see
+                        individual entries).</div>
+                </div>
+            </div>
+            <!-- Al-Hajar Al-Aswad -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Al-Hajar Al-Aswad (Black Stone) <span
+                            class="term-id">#11</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The Black Stone built into the southeast corner of the Ka`bah at a height
+                        of approximately four feet. The stone does not belong to the geology of the region and is a part
+                        of the original construction of the Ka`bah by Prophet Ibrahim (peace be upon him). Touching and
+                        kissing Hajar Al-Aswad during `Umrah and Hajj is considered sunnah.</div>
+                </div>
+            </div>
+            <!-- Halq -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Halq <span class="term-id">#12</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The complete shaving of the head by the male pilgrim on the 10th of
+                        Dhul-Hijjah. This is the last thing he does before getting out of the state of ihram. For female
+                        pilgrims, the requirement is satisfied if they trim their hair by approximately half an inch.
+                    </div>
+                </div>
+            </div>
+            <!-- Al-Haram Ash-Shareef -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Al-Haram Ash-Shareef <span
+                            class="term-id">#13</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">"The mosque around the Ka`bah in Makkah, also known as Al-Masjid Al-Haram
+                        or just Al-Haram, as well as the mosque in Madinah. The latter, also known as Al-Masjid
+                        An-Nabawi (the Prophet's Mosque), contains within its premises the grave of Prophet Muhammad
+                        (peace be upon him)."</div>
+                </div>
+            </div>
+            <!-- Hateem -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Hateem <span class="term-id">#14</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The area adjacent to the Ka`bah on its west side, enclosed by a low
+                        semi-circular wall. Tradition has it that Hajar (wife of Prophet Ibrahim) is buried in this
+                        enclosure. It is highly recommended that the pilgrim offer sunnah Prayer and supplications to
+                        Allah in this area.</div>
+                </div>
+            </div>
+            <!-- Idtiba -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Idtiba' <span class="term-id">#15</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The mode of ihram used during Tawaf Al-Qudum. The male pilgrim drapes one
+                        end of the top part of his ihram over his left shoulder back-to-front. Female pilgrims wear no
+                        ihram, so the question of idtiba` for them does not arise.</div>
+                </div>
+            </div>
+            <!-- Ifrad -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Ifrad <span class="term-id">#16</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The type of Hajj in which the pilgrim pronounces his intention to perform
+                        only Hajj (as opposed to Hajj and `Umrah) at the miqat while changing into ihram.</div>
+                </div>
+            </div>
+            <!-- Ihram -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Ihram <span class="term-id">#17</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">(1) The distinctive garb of the male pilgrim: two pieces of white, plain
+                        and unsewn cloth. (2) The state of consecration. While in ihram, the pilgrim may not use
+                        perfume, engage in sexual intercourse, clip nails, or cut hair.</div>
+                </div>
+            </div>
+            <!-- Ihsar -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Ihsar <span class="term-id">#18</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">Al-Ihsar (as used in the Quran) means blocking the path to the House of
+                        Allah. Allah says, (And complete the Hajj or `Umrah in the service of Allah. But if you are
+                        prevented (from completing it) send an offering for sacrifice.) (Al-Baqarah 2:196)</div>
+                </div>
+            </div>
+            <!-- Istilam -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Istilam <span class="term-id">#19</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The act of kissing the Black Stone (Al-Hajar Al-Aswad) at the beginning and
+                        the end of every circuit of the Ka`bah during Tawaf. If not possible, the pilgrim may extend his
+                        hand to touch the Stone and then kiss his own hand.</div>
+                </div>
+            </div>
+            <!-- Izar -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Izar <span class="term-id">#20</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">Lower cloth of the male pilgrim's clothes.</div>
+                </div>
+            </div>
+            <!-- Jamarat -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Jamarat <span class="term-id">#21</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The three stone pillars in Mina that symbolically represent the locations
+                        where the devil (Shaytan) tried to tempt Prophet Ibrahim. The pilgrim stones these pillars on
+                        the 10th through 13th of Dhul-Hijjah.</div>
+                </div>
+            </div>
+            <!-- Al-Jamrah Al-Kubra -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Al-Jamrah Al-Kubra <span
+                            class="term-id">#22</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The last and biggest stone pillar in the line. This is also called Jamrat
+                        Al-Aqabah.</div>
+                </div>
+            </div>
+            <!-- Al-Jamrah Al-Ula -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Al-Jamrah Al-Ula <span
+                            class="term-id">#23</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The first stone pillar in the line.</div>
+                </div>
+            </div>
+            <!-- Al-Jamrah Al-Wusta -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Al-Jamrah Al-Wusta <span
+                            class="term-id">#24</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The second (middle) stone pillar in the line.</div>
+                </div>
+            </div>
+            <!-- Ka'bah -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Ka'bah <span class="term-id">#25</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">A cubic structure originally built by Prophet Ibrahim and his eldest son
+                        Isma`il. It is now housed within Al-Haram Ash-Shareef in Makkah. During Hajj and `Umrah, the
+                        essential rite of Tawaf is performed around the Ka`bah.</div>
+                </div>
+            </div>
+            <!-- Kaffarah -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Kaffarah <span class="term-id">#26</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">Another name for damm. The atonement required of a pilgrim for a willful
+                        violation of a prohibition or obligation while in the state of ihram.</div>
+                </div>
+            </div>
+            <!-- Kiswah -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Kiswah <span class="term-id">#27</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The black cloth that drapes the Ka`bah. It is embroidered in gold thread
+                        with the Shahadah, praises of Allah, and verses of the Quran.</div>
+                </div>
+            </div>
+            <!-- Mabrur -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Mabrur <span class="term-id">#28</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">Accepted. A Hajj mabrur is one that is accepted by Allah. The sign of its
+                        acceptance is that a person will go back in a better state than when he came, and discontinue
+                        the sins that were between him and Allah.</div>
+                </div>
+            </div>
+            <!-- Marwah -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Marwah <span class="term-id">#29</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">A rocky hillock located approximately one hundred yards (91 meters) from
+                        the Ka`bah inside Al-Masjid Al-Haram. The pilgrim performs the devotional rite of Sa`i between
+                        the hillocks of Safa and Marwah.</div>
+                </div>
+            </div>
+            <!-- Mahram -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Mahram <span class="term-id">#30</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The husband or close male relative of a woman to whom marriage is expressly
+                        prohibited by the Shari`ah (e.g., father, grandfather, brother, uncle, nephew).</div>
+                </div>
+            </div>
+            <!-- Maqam Ibrahim -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Maqam Ibrahim <span class="term-id">#31</span></span>
+                </div>
+                <div class="card-body">
+                    <div class="term-detail">The stepping stone used by Prophet Ibrahim during the original construction
+                        of the Ka`bah. The stone carries the imprints of his feet and is housed in a glass enclosure on
+                        the north side of the Ka`bah.</div>
+                </div>
+            </div>
+            <!-- Al-Masjid Al-Haram -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Al-Masjid Al-Haram <span
+                            class="term-id">#32</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The mosque around the Ka`bah, also known as Al-Haram or Al-Haram
+                        Ash-Shareef.</div>
+                </div>
+            </div>
+            <!-- Mas'aa -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Mas'aa <span class="term-id">#33</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The distance between Safa and Marwah. See also Sa`i.</div>
+                </div>
+            </div>
+            <!-- Miqat -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Miqat <span class="term-id">#34</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">An imaginary boundary around Makkah. A prospective pilgrim cannot cross
+                        this boundary without first changing into ihram. The pilgrim changes into ihram at or before the
+                        miqat.</div>
+                </div>
+            </div>
+            <!-- Mina -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Mina <span class="term-id">#35</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">A desert location approximately three miles (4.8 km) east of Makkah where
+                        several rites of Hajj are performed.</div>
+                </div>
+            </div>
+            <!-- Mutawwif -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Mutawwif <span class="term-id">#36</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">A knowledgeable professional who can guide the pilgrim during Hajj. Also
+                        called a mu`allim.</div>
+                </div>
+            </div>
+            <!-- Muhrim -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Muhrim <span class="term-id">#37</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">A pilgrim in the state of ihram.</div>
+                </div>
+            </div>
+            <!-- Multazam -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Multazam <span class="term-id">#38</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The part of the Ka`bah between its door and the Black Stone. It is
+                        recommended that, if possible, the pilgrim touch the Ka`bah at Multazam and offer supplications
+                        to Allah.</div>
+                </div>
+            </div>
+            <!-- Mutamatti -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Mutamatti <span class="term-id">#39</span></span>
+                </div>
+                <div class="card-body">
+                    <div class="term-detail">One who is performing or has performed tamattu` Hajj.</div>
+                </div>
+            </div>
+            <!-- Mutawwif (duplicate id 40 but still distinct) -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Mutawwif (Mu'allim) <span
+                            class="term-id">#40</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">A knowledgeable professional who can guide the pilgrim during Hajj. Also
+                        called a mu`allim.</div>
+                </div>
+            </div>
+            <!-- Muzdalifah -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Muzdalifah <span class="term-id">#41</span></span>
+                </div>
+                <div class="card-body">
+                    <div class="term-detail">A desert location approximately midway between Mina and `Arafah. The
+                        pilgrim spends the night of the 10th of Dhul-Hijjah there.</div>
+                </div>
+            </div>
+            <!-- Namirah -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Namirah <span class="term-id">#42</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">A mosque in `Arafah.</div>
+                </div>
+            </div>
+            <!-- Niyyah -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Niyyah <span class="term-id">#43</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">Intention. All acts of worship are preceded by an appropriate niyyah.</div>
+                </div>
+            </div>
+            <!-- Qarin -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Qarin <span class="term-id">#44</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">One who is performing or has performed qiran Hajj.</div>
+                </div>
+            </div>
+            <!-- Qasr -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Qasr <span class="term-id">#45</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The mode of shortened Prayers usually offered when on a journey.</div>
+                </div>
+            </div>
+            <!-- Qiblah -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Qiblah <span class="term-id">#46</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The direction (towards the Ka`bah) that Muslims face when performing ritual
+                        Prayers (salah).</div>
+                </div>
+            </div>
+            <!-- Qiran -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Qiran <span class="term-id">#47</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The type of Hajj in which the pilgrim pronounces his intention to perform
+                        both `Umrah and Hajj together with the same ihram at the miqat.</div>
+                </div>
+            </div>
+            <!-- Ramal -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Ramal <span class="term-id">#48</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The ritual in which male pilgrims are required to walk briskly with their
+                        chests thrust forward during the first three circuits of Tawaf Al-Qudum. Women are not required
+                        to perform ramal.</div>
+                </div>
+            </div>
+            <!-- Ridaa -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Ridaa <span class="term-id">#49</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The upper piece of ihram.</div>
+                </div>
+            </div>
+            <!-- Rami -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Rami <span class="term-id">#50</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">"The act of symbolically stoning the devil (Shaytan) in Mina on 10 through
+                        13 Dhul-Hijjah. This commemorates the tradition that Prophet Ibrahim was tempted three times by
+                        the devil but rejected all attempts by stoning."</div>
+                </div>
+            </div>
+            <!-- Safa (id 52 due to original skip) -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Safa <span class="term-id">#52</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">A small hillock approximately half a mile (0.8 km) from the Ka`bah, inside
+                        Al-Masjid Al-Haram. The pilgrim performs the ritual of Sa`i between Safa and Marwah.</div>
+                </div>
+            </div>
+            <!-- Sa'i -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Sa'i <span class="term-id">#53</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The ritual of walking seven times back and forth between the rocky hillocks
+                        of Safa and Marwah. This retraces the footsteps of Hajar during her desperate search for water.
+                    </div>
+                </div>
+            </div>
+            <!-- Salah -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Salah <span class="term-id">#54</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">Ritual Prayers. The obligatory Prayers are performed five times a day.
+                    </div>
+                </div>
+            </div>
+            <!-- Shawt -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Shawt <span class="term-id">#55</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">One complete circumambulation, or circuit, of the Ka`bah. Each circuit
+                        starts and ends at the Black Stone. Seven circuits constitute one Tawaf.</div>
+                </div>
+            </div>
+            <!-- Talbiyah -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Talbiyah <span class="term-id">#56</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">"A recital of the words: Labbayka, Allahumma, labbayk... The Talbiyah is a
+                        prayer as well as an assertion of the pilgrim's conviction that he intends to perform Hajj only
+                        for the glory of Allah."</div>
+                </div>
+            </div>
+            <!-- Tamattu' -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Tamattu' <span class="term-id">#57</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The type of Hajj in which the pilgrim pronounces his intention to perform
+                        only `Umrah at the miqat, then performs `Umrah and goes out of ihram until the 8th of
+                        Dhul-Hijjah, when he makes a second intention and changes into ihram for Hajj.</div>
+                </div>
+            </div>
+            <!-- Taqseer -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Taqseer <span class="term-id">#58</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">Shortening or clipping of the whole head of hair by the male pilgrim
+                        following the completion of Hajj. This may be performed in lieu of halq (shaving).</div>
+                </div>
+            </div>
+            <!-- Tawaf -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Tawaf <span class="term-id">#59</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The seven-circuit circumambulation of the Ka`bah while reciting prayers. It
+                        constitutes an integral part of `Umrah and Hajj.</div>
+                </div>
+            </div>
+            <!-- Tawaf Al-Ifadah -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Tawaf Al-Ifadah <span
+                            class="term-id">#60</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The Tawaf performed by the pilgrim on the 10th of Dhul-Hijjah as the last
+                        formal rite of Hajj in Makkah after changing into street clothes. Also called Tawaf Az-Ziyarah.
+                    </div>
+                </div>
+            </div>
+            <!-- Tawaf An-Nafl -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Tawaf An-Nafl <span class="term-id">#61</span></span>
+                </div>
+                <div class="card-body">
+                    <div class="term-detail">A devotional Tawaf that may be performed any time.</div>
+                </div>
+            </div>
+            <!-- Tawaf Al-Qudum -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Tawaf Al-Qudum <span class="term-id">#62</span></span>
+                </div>
+                <div class="card-body">
+                    <div class="term-detail">The initial Tawaf performed by the pilgrim upon entering Al-Masjid Al-Haram
+                        in Makkah pursuant upon his intention for Hajj.</div>
+                </div>
+            </div>
+            <!-- Tawaf Al-`Umrah -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Tawaf Al-`Umrah <span
+                            class="term-id">#63</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The Tawaf performed as a rite of `Umrah.</div>
+                </div>
+            </div>
+            <!-- Tawaf Al-Wada -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Tawaf Al-Wada <span class="term-id">#64</span></span>
+                </div>
+                <div class="card-body">
+                    <div class="term-detail">The Farewell Tawaf performed by the pilgrim just before leaving Makkah for
+                        his next destination.</div>
+                </div>
+            </div>
+            <!-- Umrah -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">`Umrah <span class="term-id">#65</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">A set of religious and devotional rites performed in Makkah. `Umrah, or
+                        lesser Hajj, can be performed at any time of the year and, unlike Hajj, does not involve the
+                        rites at Mina, Muzdalifah, and `Arafah.</div>
+                </div>
+            </div>
+            <!-- Waqfah -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Waqfah <span class="term-id">#66</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The ritual of standing before Allah at the Mount of Mercy in `Arafah. It is
+                        a central rite of Hajj.</div>
+                </div>
+            </div>
+            <!-- Wudu -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Wudu <span class="term-id">#67</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">The ablution that is performed prior to ritual Prayer.</div>
+                </div>
+            </div>
+            <!-- Ziyarah -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Ziyarah <span class="term-id">#68</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">"A visit to the Prophet's Mosque in Madinah, usually before or after hajj
+                        or `Umrah. It is not a part of the Hajj or `Umrah rites, but many pilgrims include this visit."
+                    </div>
+                </div>
+            </div>
+            <!-- Zamzam -->
+            <div class="term-card">
+                <div class="card-header"><span class="term-title">Zamzam <span class="term-id">#69</span></span></div>
+                <div class="card-body">
+                    <div class="term-detail">"The spring of water that sprang forth miraculously under the feet of the
+                        infant Isma`il (peace be upon him) during his mother's frantic search for water between Safa and
+                        Marwah. Zamzam is now enclosed in a marble chamber in the Ka'bah."</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>📚 A comprehensive glossary of Hajj, ‘Umrah, and sacred Islamic rites — based on traditional
+                sources.<br>May this knowledge bring clarity and blessings. 🤲</p>
+            <p style="margin-top: 0.5rem;">🕋 <i>“And complete the Hajj and ‘Umrah for Allah.”</i> (Al-Baqarah 2:196)
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

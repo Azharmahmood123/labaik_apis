@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Complete Umrah Guide | Sacred Pilgrimage Steps & Rites</title>
+    <meta name="description"
+        content="A comprehensive guide to performing Umrah: Ihram, Tawaf, Sa'ee, Meeqat, supplications, and essential rituals based on authentic sources.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #faf7f0;
+            font-family: 'Segoe UI', 'Poppins', system-ui, -apple-system, 'Roboto', 'Noto Sans', sans-serif;
+            color: #1e2a2f;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+
+        /* main container */
+        .guide-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 2rem;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            border: 1px solid #ede6d5;
+        }
+
+        /* header / hero */
+        .hero {
+            background: linear-gradient(135deg, #0b3b2f 0%, #1c5d4a 100%);
+            padding: 2.5rem 2rem;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .hero h1 span {
+            background: #f3c26b20;
+            backdrop-filter: blur(2px);
+            font-size: 1.9rem;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            max-width: 680px;
+            margin: 0 auto;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        .badge-info {
+            background: #f4d79330;
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 60px;
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            backdrop-filter: blur(2px);
+        }
+
+        /* navigation dots (simple index) */
+        .quick-nav {
+            background: #fff9ef;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #eee3d2;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 0.8rem;
+            justify-content: center;
+        }
+
+        .quick-nav a {
+            background: #f3ede3;
+            color: #2c5a4a;
+            text-decoration: none;
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: 1px solid #e7ddcf;
+        }
+
+        .quick-nav a:hover {
+            background: #d9e4de;
+            color: #0b3b2f;
+            border-color: #b9cfc2;
+        }
+
+        /* content grid */
+        .guide-content {
+            padding: 2rem 1.8rem 2.5rem 1.8rem;
+        }
+
+        .step-card {
+            background: #ffffff;
+            border-radius: 1.5rem;
+            margin-bottom: 2.2rem;
+            border: 1px solid #f0e8de;
+            transition: box-shadow 0.2s;
+            scroll-margin-top: 80px;
+        }
+
+        .step-card:hover {
+            box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-header {
+            background: #fefaf4;
+            padding: 1rem 1.8rem;
+            border-bottom: 2px solid #e9dfd2;
+            border-radius: 1.5rem 1.5rem 0 0;
+            display: flex;
+            align-items: baseline;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .step-id {
+            font-weight: 800;
+            font-size: 1.3rem;
+            background: #e7dfd3;
+            width: 44px;
+            height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 60px;
+            color: #2b4f41;
+            background: #e2d8ca;
+        }
+
+        .step-title {
+            font-size: 1.65rem;
+            font-weight: 700;
+            color: #1b3d34;
+            letter-spacing: -0.2px;
+        }
+
+        .card-body {
+            padding: 1.6rem 1.8rem;
+            font-size: 1rem;
+            color: #2a3a36;
+        }
+
+        .card-body p {
+            margin-bottom: 1rem;
+        }
+
+        .arabic-text {
+            font-family: 'Amiri', 'Noto Naskh Arabic', 'Traditional Arabic', 'Segoe UI', serif;
+            font-size: 1.35rem;
+            line-height: 1.6;
+            background: #f8f6f0;
+            padding: 0.9rem 1rem;
+            border-radius: 1.2rem;
+            margin: 1rem 0;
+            text-align: right;
+            direction: rtl;
+            color: #1c4e3f;
+            border-right: 4px solid #dabb84;
+        }
+
+        .transliteration {
+            font-style: italic;
+            font-weight: 500;
+            color: #6a5c4a;
+            margin: 0.5rem 0;
+        }
+
+        .dua-box {
+            background: #fef7e8;
+            border-left: 5px solid #b98f48;
+            padding: 0.8rem 1.2rem;
+            margin: 1rem 0;
+            border-radius: 1rem;
+        }
+
+        hr {
+            margin: 1.2rem 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #e2d6c8, transparent);
+        }
+
+        ul,
+        ol {
+            margin: 0.8rem 0 0.8rem 1.5rem;
+        }
+
+        li {
+            margin: 0.4rem 0;
+        }
+
+        strong {
+            color: #1f5a49;
+            font-weight: 700;
+        }
+
+        .highlight {
+            background: #eef5f1;
+            padding: 0.2rem 0.3rem;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        .pillar-badge {
+            background: #1e6a58;
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 0.2rem 0.7rem;
+            border-radius: 40px;
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        footer {
+            background: #f2ede3;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.8rem;
+            color: #5e5a4f;
+            border-top: 1px solid #e1d5c6;
+        }
+
+        @media (max-width: 700px) {
+            .guide-content {
+                padding: 1.2rem;
+            }
+
+            .step-title {
+                font-size: 1.3rem;
+            }
+
+            .card-header {
+                padding: 0.8rem 1.2rem;
+            }
+
+            .card-body {
+                padding: 1.2rem;
+            }
+
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+        }
+
+        a.anchor-link {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="guide-container">
+        <div class="hero">
+            <h1>
+                <span>🕋</span> The Complete Umrah Guide
+                <span>🕊️</span>
+            </h1>
+            <p>A spiritual journey of devotion · Step-by-step rituals, duas, and essential rulings from the sacred
+                sources</p>
+            <div class="badge-info">📖 Based on authentic Islamic teachings · Ihram · Tawaf · Sa'ee · Tahal-lul</div>
+        </div>
+
+        <div class="quick-nav">
+            <a href="#intro">1. Intro</a>
+            <a href="#importance">2. Importance</a>
+            <a href="#preparation">3. Preparation</a>
+            <a href="#ihram">4. Ihram</a>
+            <a href="#intention">5. Niyyah & Talbiyah</a>
+            <a href="#meeqat">6. Meeqat</a>
+            <a href="#haram">7. Entering Haram</a>
+            <a href="#tawaf">8. Tawaf</a>
+            <a href="#saee">9. Sa'ee</a>
+            <a href="#shaving">10. Halq / Taqsir</a>
+        </div>
+
+        <div class="guide-content">
+            <!-- 1. Introduction to Umrah -->
+            <div id="intro" class="step-card">
+                <div class="card-header">
+                    <div class="step-id">1</div>
+                    <div class="step-title">Introduction to Umrah</div>
+                </div>
+                <div class="card-body">
+                    <p><strong>Umrah</strong> in Islamic terminology means paying a visit to the Ka‘bah, performing
+                        Tawaf around it, and walking between Safaa and Marwah seven times. A performer of Umrah puts off
+                        their Ihram by having hair shaved or cut. Unlike Hajj, Umrah can be performed at any time of the
+                        year.</p>
+                    <p><span class="pillar-badge">Pillars of Umrah (4)</span></p>
+                    <ul>
+                        <li><strong>Ihram:</strong> The sacred state and dress code assumed at the Meeqat.</li>
+                        <li><strong>Tawaf:</strong> Circumambulation around the Ka‘bah (7 circuits).</li>
+                        <li><strong>Sa'ee:</strong> Walking between As-Safaa and Al-Marwah (7 circuits).</li>
+                        <li><strong>Tahal-lul:</strong> Exiting the state of Ihram, making lawful what was previously
+                            prohibited.</li>
+                    </ul>
+                    <p>During Umrah, pilgrims do not go to Mina, Arafat, Muzdalifah, or throw pebbles. Those rites are
+                        specific to Hajj.</p>
+                </div>
+            </div>
+
+            <!-- 2. Importance of Umrah -->
+            <div id="importance" class="step-card">
+                <div class="card-header">
+                    <div class="step-id">2</div>
+                    <div class="step-title">Importance & Virtues</div>
+                </div>
+                <div class="card-body">
+                    <p>Umrah cleanses one’s soul from past sins and can be performed multiple times as an expiation. It
+                        protects from poverty and draws the mercy of Allah. The Prophet ﷺ said that performing Umrah in
+                        Ramadan equals Hajj in reward. Moreover, if a person passes away during the journey of Umrah,
+                        they are granted Jannah.</p>
+                </div>
+            </div>
+
+            <!-- 3. Preparation for Umrah -->
+            <div id="preparation" class="step-card">
+                <div class="card-header">
+                    <div class="step-id">3</div>
+                    <div class="step-title">Preparation before the Journey</div>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li>Learn about Makkah, Madinah, and Umrah rituals thoroughly.</li>
+                        <li>Arrange accommodation, documents (passport, ID), and necessary funds.</li>
+                        <li>Get to know travel companions; having an experienced pilgrim is beneficial.</li>
+                        <li>Prepare emergency contacts, medications, and a list of Duas requested by friends/family.
+                        </li>
+                        <li>Pack Ihram garments, personal hygiene items, and lightweight essentials.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 4. The Ihram -->
+            <div id="ihram" class="step-card">
+                <div class="card-header">
+                    <div class="step-id">4</div>
+                    <div class="step-title">The Ihram – Sacred Dress & State</div>
+                </div>
+                <div class="card-body">
+                    <p>Ihram is both the dress code and the intention (niyyah) by which a person enters the sacred
+                        state. Men wear two white seamless sheets; women maintain their ordinary modest clothing (no
+                        face-cover nor gloves). Once in Ihram, certain actions become forbidden: cutting nails, hair,
+                        using perfume, marital relations, hunting, and covering the head (for men).</p>
+                </div>
+            </div>
+
+            <!-- 5. Intention for Umrah and Talbiyah -->
+            <div id="intention" class="step-card">
+                <div class="card-header">
+                    <div class="step-id">5</div>
+                    <div class="step-title">Intention (Niyyah) & Talbiyah</div>
+                </div>
+                <div class="card-body">
+                    <p>Before crossing the Meeqat, perform 2 rak‘ahs of nafl (if not makruh time). After the salah,
+                        uncover your head (for men) and make the intention for Umrah:</p>
+                    <div class="arabic-text">اَلّلٰهُمَّ اِنِّيْ اُرِيْدُ الْعُمْرَةَ فَيَسِّرْهَا لِيْ وَتَقَبَّلْهَا
+                        مِنِّيْ</div>
+                    <p><em>“O Allah, I intend to perform Umrah, make it easy for me and accept it from me.”</em></p>
+                    <p>Then recite <strong>Talbiyah</strong> three times (men raise voice, women recite softly):</p>
+                    <div class="arabic-text">لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ ،
+                        إِنَّ الْحَمْدَ والنِّعْمَةَ لَكَ وَالْمُلْكُ ، لَا شَرِيكَ لَكَ</div>
+                    <p><em>“Here I am O Allah, here I am. You have no partner, here I am. Verily all praise, grace and
+                            sovereignty belong to You. You have no partner.”</em></p>
+                    <p>Repeat Talbiyah frequently until beginning Tawaf. Then recite durood and ask Allah for Paradise
+                        and protection from Fire.</p>
+                </div>
+            </div>
+
+            <!-- 6. The Meeqat -->
+            <div id="meeqat" class="step-card">
+                <div class="card-header">
+                    <div class="step-id">6</div>
+                    <div class="step-title">The Meeqat – Boundaries of Ihram</div>
+                </div>
+                <div class="card-body">
+                    <p>Meeqat are fixed stations beyond which pilgrims cannot pass without Ihram. The five locations
+                        designated by Prophet ﷺ:</p>
+                    <ul>
+                        <li><strong>Dhul Halayfah</strong> (for Madinah pilgrims) – 435 km from Makkah.</li>
+                        <li><strong>Al-Juhfah</strong> (Syria, Egypt, Jordan region) – 180 km from Makkah.</li>
+                        <li><strong>Yalamlam</strong> (Yemen side) – 92 km from Makkah.</li>
+                        <li><strong>Qarn Al Manaazil</strong> (Najd, Taif) – 75 km from Makkah.</li>
+                        <li><strong>Dhatu Irq</strong> (Iraq, Khurasan) – 100 km from Makkah.</li>
+                    </ul>
+                    <p>For air travel, assume Ihram before the plane crosses the Meeqat boundary.</p>
+                </div>
+            </div>
+
+            <!-- 7. Reaching Haram -->
+            <div id="haram" class="step-card">
+                <div class="card-header">
+                    <div class="step-id">7</div>
+                    <div class="step-title">Entering Al-Masjid Al-Haram</div>
+                </div>
+                <div class="card-body">
+                    <p>Enter with your right foot, expressing humility and gratitude, and recite:</p>
+                    <div class="arabic-text">رَبِّ اغْفِرْ لِي ذُنُوبِي وَافْتَحْ لِي أَبْوَابَ رَحْمَتِكَ</div>
+                    <p><em>“My Lord, forgive my sins and open the doors of Your mercy for me.”</em></p>
+                    <p>Upon seeing the Ka‘bah, stop reciting Talbiyah. Raise your hands in supplication.</p>
+                </div>
+            </div>
+
+            <!-- 8. Tawaf (detailed) -->
+            <div id="tawaf" class="step-card">
+                <div class="card-header">
+                    <div class="step-id">8</div>
+                    <div class="step-title">Tawaf – Circumambulation of Ka‘bah</div>
+                </div>
+                <div class="card-body">
+                    <p>Begin at the <strong>Hajr-e-Aswad</strong> (Black Stone). Touch it with right hand, kiss it or,
+                        if not possible, point towards it and say <em>“Bismillah, Allahu Akbar”</em>. Keep the Ka‘bah on
+                        your left. Men do <strong>Idhtibaa‘</strong> (right shoulder bare) and <strong>Raml</strong>
+                        (fast-paced walking with small steps) during first three circuits.</p>
+                    <div class="dua-box">
+                        <p>Recommended supplication during Tawaf:</p>
+                        <div class="arabic-text">سُبْحَانَ اللهِ، وَالْحَمْدُ للهِ، ولَا إِلَهَ إِلَّا اللهُ، وَاللهُ
+                            أَكْبَرُ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللهِ العَلِيِّ الْعَظيِمِ</div>
+                        <p>Between the Yemeni Corner and the Black Stone, recite:</p>
+                        <div class="arabic-text">رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً
+                            وَقِنَا عَذَابَ النَّارِ</div>
+                        <p><em>“Our Lord, grant us good in this world and the Hereafter, and save us from the
+                                Fire.”</em> (Qur’an 2:201)</p>
+                    </div>
+                    <p>After completing 7 circuits (making Istilam 8 times), pray 2 rak‘ahs behind Maqam Ibrahim (or
+                        anywhere in Haram), reciting Surah Al-Kafirun and Al-Ikhlas. Then drink Zamzam water with the
+                        dua:</p>
+                    <div class="arabic-text">اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمَاً نَافِعَاً وَرِزْقَاً وَاسِعَاً
+                        وَشِفَاءً مِنْ كُلِّ دَاءٍ</div>
+                    <p><em>“O Allah, I ask You for beneficial knowledge, abundant provision, and cure from every
+                            disease.”</em></p>
+                </div>
+            </div>
+
+            <!-- 9. Sa'ee (Safa and Marwah) -->
+            <div id="saee" class="step-card">
+                <div class="card-header">
+                    <div class="step-id">9</div>
+                    <div class="step-title">Sa'ee – Walking between Safa & Marwah</div>
+                </div>
+                <div class="card-body">
+                    <p>Proceed to Mount Safa. Face the Ka‘bah and recite three times:</p>
+                    <div class="arabic-text">اللَّهُ أَكْبَرُ ، اللَّهُ أَكْبَرُ ، اللَّهُ أَكْبَرُ<br>لَا إِلَهَ إِلَّا
+                        اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ
+                        قَدِيرٌ</div>
+                    <p><em>“Allah is the Greatest … none has the right to be worshipped except Allah alone, He fulfilled
+                            His promise, gave victory to His servant, and defeated the confederates alone.”</em></p>
+                    <p>Walk towards Marwah. Between the two green fluorescent markers (mīlain akhḍarayn), men jog
+                        lightly. Make du'a and dhikr. Upon reaching Marwah, repeat the same supplication facing the
+                        Ka‘bah. This completes one lap. Repeat until you complete 7 laps, ending at Marwah.</p>
+                </div>
+            </div>
+
+            <!-- 10. Shaving / Cutting hair (Tahal-lul) -->
+            <div id="shaving" class="step-card">
+                <div class="card-header">
+                    <div class="step-id">10</div>
+                    <div class="step-title">Halq or Taqsir – Final Exit from Ihram</div>
+                </div>
+                <div class="card-body">
+                    <p>After completing Sa'ee, proceed to a barber (or do it yourself). Men should shave their head
+                        completely (<strong>Halq</strong>) or trim hair evenly (<strong>Taqsir</strong>); shaving is
+                        preferred. Women cut a fingertip's length (approx. 2.5 cm) from the end of their hair. Once this
+                        is done, the state of Ihram is lifted and all normal lawful acts become permissible. Umrah is
+                        now complete. Alhamdulillah!</p>
+                    <p style="margin-top: 0.8rem;">May Allah accept your Umrah and bless your journey. You may
+                        optionally perform two rak‘ahs in the mataf area as a gesture of gratitude.</p>
+                </div>
+            </div>
+
+            <!-- Additional note from source: virtue summary -->
+            <div
+                style="background: #f9f5ea; border-radius: 1.2rem; padding: 1.2rem 1.5rem; margin-top: 1rem; text-align: center; border: 1px solid #e7dbbc;">
+                <p style="font-size: 0.95rem;">✨ <strong>Complete Umrah Mubarak</strong> ✨<br>
+                    “The rites of Umrah have now been completed — may your devotion be elevated, sins forgiven, and duas
+                    answered.”</p>
+            </div>
+        </div>
+        <footer>
+            <p>📿 Based on authentic sources · Ihram · Tawaf · Sa'ee · Talbiyah · The sacred journey of a lifetime<br>
+                This guide follows the pillars and sunnah acts. For detailed Masail (rulings), consult a reliable
+                scholar. May Allah accept all acts of worship.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

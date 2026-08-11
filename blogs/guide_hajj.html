@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Complete Hajj Guide | Pilgrim's Manual</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fef7ec;
+            font-family: 'Segoe UI', 'Roboto', 'Cairo', 'Helvetica Neue', sans-serif;
+            color: #2c1a0f;
+            line-height: 1.5;
+        }
+
+        /* ornate border pattern */
+        .page-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: radial-gradient(ellipse at 20% 30%, rgba(255, 245, 225, 0.4) 0%, rgba(252, 240, 220, 0) 70%);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        /* header with islamic geometric feel */
+        .hero {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding: 2rem 1rem 2rem;
+            background: linear-gradient(135deg, #fff5e8, #fffbf4);
+            border-radius: 80px 80px 60px 60px;
+            border: 1px solid #eedfcb;
+            box-shadow: 0 10px 20px -8px rgba(80, 50, 25, 0.08);
+        }
+
+        .badge {
+            display: inline-block;
+            background: #c28a5c;
+            color: #fff3e6;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            padding: 0.3rem 1.2rem;
+            border-radius: 40px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3.3rem;
+            font-weight: 800;
+            background: linear-gradient(120deg, #7a4b28, #b5632a);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .subhead {
+            font-size: 1.15rem;
+            color: #6c4a30;
+            max-width: 720px;
+            margin: 0.8rem auto 0;
+            font-weight: 400;
+            border-top: 1px solid #e7d5be;
+            padding-top: 1rem;
+        }
+
+        /* table of contents style nav - static */
+        .toc {
+            background: #fff9f2;
+            border-radius: 48px;
+            padding: 1rem 1.5rem;
+            margin-bottom: 2.5rem;
+            border: 1px solid #eedbbc;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.02);
+        }
+
+        .toc-title {
+            font-weight: 700;
+            color: #a56534;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+            text-align: center;
+        }
+
+        .toc-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem 0.9rem;
+        }
+
+        .toc-link {
+            background: #fff3e8;
+            border: 1px solid #e7d0b4;
+            padding: 0.35rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #7a4c2c;
+            text-decoration: none;
+            transition: 0.1s linear;
+            display: inline-block;
+        }
+
+        .toc-link:hover {
+            background: #e7cfb2;
+            border-color: #c9a26e;
+            color: #3e2a1b;
+        }
+
+        /* masonry style grid */
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 32px;
+            box-shadow: 0 12px 28px -12px rgba(70, 40, 20, 0.08);
+            transition: all 0.2s ease;
+            border: 1px solid #f0e2d0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            break-inside: avoid;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 30px -10px rgba(85, 55, 30, 0.12);
+            border-color: #ddc6a8;
+        }
+
+        .card-header {
+            padding: 1.3rem 1.5rem 0.6rem;
+            border-bottom: 2px solid #f8e8d8;
+            background: #fefaf5;
+        }
+
+        .card-title {
+            font-size: 1.38rem;
+            font-weight: 700;
+            color: #67492e;
+            letter-spacing: -0.2px;
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .card-id {
+            font-size: 0.7rem;
+            font-weight: 500;
+            background: #f0e2d2;
+            padding: 0.2rem 0.7rem;
+            border-radius: 40px;
+            color: #8b5a34;
+        }
+
+        .card-content {
+            padding: 1.2rem 1.6rem 1.8rem;
+            flex: 1;
+            font-size: 0.95rem;
+            color: #332418;
+        }
+
+        .card-content p {
+            margin-bottom: 0.7rem;
+        }
+
+        .card-content strong,
+        .card-content b {
+            color: #bc6f3c;
+            font-weight: 700;
+        }
+
+        .card-content ul,
+        .card-content ol {
+            margin: 0.6rem 0 0.6rem 1.3rem;
+        }
+
+        .card-content li {
+            margin: 0.4rem 0;
+        }
+
+        .card-content hr {
+            margin: 0.8rem 0;
+            border: 0;
+            height: 1px;
+            background: linear-gradient(90deg, #eedbc2, transparent);
+        }
+
+        .highlight {
+            background: #fff2e4;
+            padding: 0.1rem 0.3rem;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        .arabic-note {
+            font-family: 'Segoe UI', 'Tahoma', sans-serif;
+            border-left: 3px solid #dbaa74;
+            padding-left: 1rem;
+            margin: 0.8rem 0;
+            color: #72563c;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            margin-top: 4rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #a17a56;
+            border-top: 1px solid #e7d5c0;
+            padding-top: 2rem;
+        }
+
+        @media (max-width: 780px) {
+            .container {
+                padding: 1rem 1rem 2rem;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="container">
+            <div class="hero">
+                <span class="badge">✦ The Fifth Pillar of Islam ✦</span>
+                <h1>Ḥajj Guide & Sacred Rituals</h1>
+                <div class="subhead">A complete journey from the 8th to 13th of Dhul Hijjah — obligations, pillars, and
+                    spiritual preparation</div>
+            </div>
+
+            <!-- Static Table of Contents (all sections) -->
+            <div class="toc">
+                <div class="toc-title">📖 navigate the guide</div>
+                <div class="toc-grid">
+                    <a href="#card-1" class="toc-link">1. Introduction</a>
+                    <a href="#card-2" class="toc-link">2. Time & Place</a>
+                    <a href="#card-3" class="toc-link">3. Who Must Perform</a>
+                    <a href="#card-4" class="toc-link">4. Prerequisites</a>
+                    <a href="#card-5" class="toc-link">5. Preparing for Hajj</a>
+                    <a href="#card-6" class="toc-link">6. Fundamental Acts</a>
+                    <a href="#card-7" class="toc-link">7. Compulsory Acts</a>
+                    <a href="#card-8" class="toc-link">8. Days of Hajj</a>
+                    <a href="#card-9" class="toc-link">9. Hajj in a Glance</a>
+                    <a href="#card-10" class="toc-link">10. Day 1: Ihram</a>
+                    <a href="#card-11" class="toc-link">11. Day 1: Umrah</a>
+                    <a href="#card-12" class="toc-link">12. Day 1: Mina</a>
+                    <a href="#card-13" class="toc-link">13. Day 2: Arafat</a>
+                    <a href="#card-14" class="toc-link">14. Day 2: Muzdalifah</a>
+                    <a href="#card-15" class="toc-link">15. Day 3: Mina</a>
+                    <a href="#card-16" class="toc-link">16. Tawaf al-Ifada</a>
+                    <a href="#card-17" class="toc-link">17. Days 4-5: Mina</a>
+                    <a href="#card-18" class="toc-link">18. Farewell Tawaf</a>
+                    <a href="#card-19" class="toc-link">19. Return to Home</a>
+                </div>
+            </div>
+
+            <div class="guide-grid">
+                <!-- CARD 1: Introduction -->
+                <div class="card" id="card-1">
+                    <div class="card-header">
+                        <div class="card-title"><span>1. Introduction</span><span class="card-id">#1</span></div>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Hajj</strong> is an Arabic word carrying the meanings of heading for an honorable
+                            place or person. Hajj is among the five pillars of Islam in which Muslims perform pilgrimage
+                            to Mecca. Performing Hajj is obligatory for a Muslim who can afford and fulfills certain
+                            conditions.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 2: Time and Place of Hajj -->
+                <div class="card" id="card-2">
+                    <div class="card-header">
+                        <div class="card-title"><span>2. Time and Place of Hajj</span><span class="card-id">#2</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Time of Hajj</strong><br>Hajj is performed in the Zil-Hajj; the last month of Islamic
+                            Calendar from the 8th to 13th day.</p>
+                        <p>Umrah can be performed during any time in a year while Hajj is specific to these days only.
+                        </p>
+                        <p><strong>Place of Hajj</strong><br>The Holy Mosque of Kabba, is located in Mecca, Saudi
+                            Arabia.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 3: Who Must Perform Hajj -->
+                <div class="card" id="card-3">
+                    <div class="card-header">
+                        <div class="card-title"><span>3. Who Must Perform Hajj</span><span class="card-id">#3</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>There are certain conditions which must be fulfilled by a Muslim to perform at least one Hajj
+                            in his or her lifetime.</p>
+                        <p><strong>The conditions are:</strong></p>
+                        <ul>
+                            <li>Mentally healthy and in total contract of his or her mental faculties.</li>
+                            <li>Wise and mature enough to understand the importance of what he or she is about to do.
+                            </li>
+                            <li>Financially sound not only in the financing the Hajj but also supporting the dependants
+                                during the absence.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CARD 4: Hajj Prerequisites -->
+                <div class="card" id="card-4">
+                    <div class="card-header">
+                        <div class="card-title"><span>4. Hajj Prerequisites</span><span class="card-id">#4</span></div>
+                    </div>
+                    <div class="card-content">
+                        <p>Hajj requires complete devotion and peace of mind, fulfilling the prerequisites one can
+                            achieve the peace of mind and devotion required.</p>
+                        <p><strong>The prerequisites includes:</strong></p>
+                        <ul>
+                            <li>The intention of performing Hajj should be to please Allah only and not to gain fame or
+                                impress people.</li>
+                            <li>The Hajj expenses should be paid from legitimate (Halal) money. Money from any other
+                                means is not acceptable.</li>
+                            <li>All the debts and financial liabilities should be cleared before setting off for the
+                                journey.</li>
+                            <li>Based on the instructions of Prophet (PBUH) one must resolve all the conflicts with
+                                other people or ask for forgiveness from other people whom they may have hurt in the
+                                past before going to Hajj.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CARD 5: Preparing for Hajj -->
+                <div class="card" id="card-5">
+                    <div class="card-header">
+                        <div class="card-title"><span>5. Preparing for Hajj</span><span class="card-id">#5</span></div>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>Ask for the help of Allah to assist in resources for Hajj.</li>
+                            <li>Inform your employer about the vacations well before consulting with the travel agent.
+                            </li>
+                            <li>Search for a travel agent before visiting the marketplace and consulting with other
+                                Hajjis.</li>
+                            <li>From your travel agent get information about all the legal requirements and start
+                                fulfilling them.</li>
+                            <li>Start learning about the rituals of Hajj with help of different books.</li>
+                            <li>Pay proper attention to your physical toil from a person.</li>
+                            <li>Meet people who have performed Hajj and try to get an insight about the situation and
+                                circumstance during Hajj.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CARD 6: Fundamental Acts of Hajj -->
+                <div class="card" id="card-6">
+                    <div class="card-header">
+                        <div class="card-title"><span>6. Fundamental Acts of Hajj</span><span class="card-id">#6</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>The Fundamental acts include:</strong></p>
+                        <ul>
+                            <li>Entering the state of Ihram</li>
+                            <li>Standing in the ground of Arafat</li>
+                            <li>Tawaaf of Ka'aba</li>
+                            <li>Sa'yi (the act of hastening between the hills of Safa and Marwa)</li>
+                        </ul>
+                        <p>Not being able to perform these acts results in the Hajj not being complete and the person
+                            must perform it again.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 7: Compulsory Acts of Hajj -->
+                <div class="card" id="card-7">
+                    <div class="card-header">
+                        <div class="card-title"><span>7. Compulsory Acts of Hajj</span><span class="card-id">#7</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>The compulsory acts include:</strong></p>
+                        <ul>
+                            <li>Wearing of Ihram from the Miqat</li>
+                            <li>Spending a day in the field of Arafat</li>
+                            <li>Spending night in Muzdalefah</li>
+                            <li>Stay at Mina</li>
+                            <li>Casting at Jamarat</li>
+                            <li>Head shaving or hair shortening</li>
+                            <li>Farewell Tawaaf of Ka'aba</li>
+                            <li>Activities performed in the days of Hajj</li>
+                        </ul>
+                        <p>Missing any of the compulsory acts of Hajj makes it mandatory for the person to sacrifice an
+                            animal against every act missed.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 8: Days of Hajj (detailed narrative) -->
+                <div class="card" id="card-8">
+                    <div class="card-header">
+                        <div class="card-title"><span>8. Days of Hajj</span><span class="card-id">#8</span></div>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>1st Day:</strong> On 8th Zil-Hajj in the morning after wearing of Ihram, people
+                            travel from Mecca to Mina.</p>
+                        <p><strong>2nd Day:</strong> On 9th Zil-Hajj people arrive at Arafat early in the morning where
+                            they stay till Asar Salah performing Ibadah and leave for Muzdalifah before the sunset.</p>
+                        <p><strong>3rd Day:</strong> On 10th Zil-Hajj people stay the whole day in Muzdalfah where they
+                            say their Maghrib and Isha prayers together and perform Ibadah the whole night long. After
+                            offering the Fajar prayer the pilgrims leave for Mina where at first they make sacrifice
+                            (Qurbani), shave or trim their hair and remove the Ihram. Afterwards, the Tawaaf-e-Ziyaarah
+                            is performed and then the Sa'yi between Safa and Marwa and then the pilgrims return to Mina.
+                        </p>
+                        <p><strong>4th Day:</strong> On 11th Zil-Hajj the three Jamraats are stoned.</p>
+                        <p><strong>5th Day:</strong> On 12th Zil-Hajj the three Jamraats are again stoned and the
+                            pilgrims perform the Farewell Tawaaf before leaving Mecca.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 9: Hajj in a Glance (originally noText, but we present summary) -->
+                <div class="card" id="card-9">
+                    <div class="card-header">
+                        <div class="card-title"><span>9. Hajj in a Glance</span><span class="card-id">#9</span></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="arabic-note">📌 Overview: From 8th Dhul Hijjah to 13th — Ihram, Mina, Arafat,
+                            Muzdalifah, Rami, Sacrifice, Tawaf al-Ifada, Sa'yi, Farewell Tawaf. A spiritual marathon of
+                            devotion and unity.</div>
+                        <p>Essential pillars: Ihram, standing at Arafat, Tawaf, Sa'yi. Missing any requires repetition.
+                            The days of Tashreeq involve remembrance of Allah and stoning the Jamarat. Perform with
+                            sincerity and knowledge.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 10: Day 1 - Entering Ihram -->
+                <div class="card" id="card-10">
+                    <div class="card-header">
+                        <div class="card-title"><span>10. Hajj Day 1 (8th Dhul Hijjah) - Entering Ihram</span><span
+                                class="card-id">#10</span></div>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>Take a Bath (Ghusl)</li>
+                            <li>Wear Ihram Dress</li>
+                            <li>Make intention for Umrah or Hajj</li>
+                            <li>Recite Talbiyah</li>
+                            <li>Avoid Unnecessary Acts while in the State of Ihram</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CARD 11: Day 1 - Performing Umrah -->
+                <div class="card" id="card-11">
+                    <div class="card-header">
+                        <div class="card-title"><span>11. Hajj Day 1 (8th Dhul Hijjah) - Performing Umrah</span><span
+                                class="card-id">#11</span></div>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>Perform Tawaaf around the Ka'bah</li>
+                            <li>Offer two Rak'ah Salat behind Place of Ibrahim</li>
+                            <li>Between Safa and Marwah, Make Sa'yi</li>
+                            <li>Cut your hair and remove Ihram dress</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CARD 12: Day 1 - Departure to Mina -->
+                <div class="card" id="card-12">
+                    <div class="card-header">
+                        <div class="card-title"><span>12. Hajj Day 1 (8th Dhul Hijjah) - Departure to Mina</span><span
+                                class="card-id">#12</span></div>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>After Umrah, wear Ihram dress again</li>
+                            <li>Make intention for Hajj</li>
+                            <li>Stay in Mina during the 8th of Zhul-Hijja and perform five prayers (Zuhr prayer to Fajr
+                                prayer on the day of Arafat)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CARD 13: Day 2 - Departure to Arafat -->
+                <div class="card" id="card-13">
+                    <div class="card-header">
+                        <div class="card-title"><span>13. Hajj Day 2 (9th Dhul Hijjah) Departure to Arafat</span><span
+                                class="card-id">#13</span></div>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>Going for Arafat on the morning of the 9th of Zhul-Hijja and stay there until sunset
+                            </li>
+                            <li>Reside in any part of Arafat</li>
+                            <li>Glorify Allah, repeat supplication, repent to Allah and ask for forgiveness</li>
+                            <li>Pray Zuhr and Asar Salat combined at the time of Zuhr Salat</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CARD 14: Day 2 - Departure to Muzdalifah -->
+                <div class="card" id="card-14">
+                    <div class="card-header">
+                        <div class="card-title"><span>14. Hajj Day 2 (9th Dhul Hijjah) – Departure to
+                                Muzdalifah</span><span class="card-id">#14</span></div>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>Leave for Muzdalifah shortly after sunset on the 9th of Zhul-Hijja</li>
+                            <li>Offer Maghrib Salat and shortened Isha salat combined</li>
+                            <li>Now stay all night and offer the Fajr prayer</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CARD 15: Day 3 - Returning to Mina (10th Dhul Hijjah) -->
+                <div class="card" id="card-15">
+                    <div class="card-header">
+                        <div class="card-title"><span>15. Hajj Day 3 (10th Dhul Hijjah) - Returning to Mina</span><span
+                                class="card-id">#15</span></div>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>Soon before sunrise, leave Muzdalifah for Mina. Depart to Jamarat al-Agabah and stone it
+                                with seven pebbles</li>
+                            <li>Slaughter your sacrifice</li>
+                            <li>Shave your head</li>
+                            <li>Now take off Ihram dress</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CARD 16: Day 3 - Tawaf al-Ifada -->
+                <div class="card" id="card-16">
+                    <div class="card-header">
+                        <div class="card-title"><span>16. Hajj Day 3 (10th Dhul Hijjah)– Tawaf al-Ifada</span><span
+                                class="card-id">#16</span></div>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>Perform Tawaaf al-Ifada and Sa'yi between Safa and Marwah</li>
+                            <li>After Tawaf al-Ifada, all restrictions are removed</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CARD 17: Days 4 & 5 (11th & 12th Dhul Hijjah) - Mina -->
+                <div class="card" id="card-17">
+                    <div class="card-header">
+                        <div class="card-title"><span>17. Hajj Day 4,5 (11th & 12th Dhul Hijjah) - Returning to
+                                Mina</span><span class="card-id">#17</span></div>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>Spend the Tashreeq days (11th, 12th, and 13th of Zhul-Hijja) in Mina</li>
+                            <li>After Zuhr prayer each day, stone the three Jamarat, starting with the small one and
+                                ending with al-Acjabah</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CARD 18: Farewell Tawaf -->
+                <div class="card" id="card-18">
+                    <div class="card-header">
+                        <div class="card-title"><span>18. Farewell Tawaf</span><span class="card-id">#18</span></div>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>Depart to Mecca and do a farewell Tawaf. (Pray two Rakat Salat)</li>
+                            <li>Let the Tawaaf be the last thing you do in Mecca</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CARD 19: Return to Home (Visit to Medina) -->
+                <div class="card" id="card-19">
+                    <div class="card-header">
+                        <div class="card-title"><span>19. Return to Home</span><span class="card-id">#19</span></div>
+                    </div>
+                    <div class="card-content">
+                        <p>It is a preferred step to visit the Prophet's Mosque in Medina, but this is not a part of
+                            Hajj.</p>
+                        <p>May Allah accept your pilgrimage and grant you a safe return.</p>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <p>🕋 “And complete the Hajj and Umrah for Allah.” (Qur’an 2:196) <br> This guide includes all essential
+                    rulings, days, and prerequisites — from Ihram to Farewell Tawaf. May your journey be blessed.</p>
+                <p style="margin-top: 0.8rem;">✨ Based on authentic sources and classical manuals ✨</p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

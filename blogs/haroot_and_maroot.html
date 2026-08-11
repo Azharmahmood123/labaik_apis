@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>The Story of Haaroot and Maaroot | Lessons from the Quran</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #f8f5ef 0%, #ede6db 100%);
+            font-family: 'Segoe UI', 'Merriweather', 'Georgia', 'Times New Roman', serif;
+            color: #1e2a2e;
+            line-height: 1.65;
+            padding: 2rem 1rem;
+        }
+
+        .blog-container {
+            max-width: 880px;
+            margin: 0 auto;
+            background-color: #fffef7;
+            border-radius: 32px;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        .blog-header {
+            background: #1e3a2f;
+            padding: 2.5rem 2rem 1.8rem;
+            text-align: center;
+            color: #fef3d6;
+            border-bottom: 6px solid #d4af7a;
+        }
+
+        .blog-header h1 {
+            font-size: 2.2rem;
+            letter-spacing: -0.3px;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-header .subhead {
+            font-size: 1rem;
+            font-style: italic;
+            opacity: 0.9;
+            font-family: 'Segoe UI', 'Georgia', serif;
+            border-top: 1px solid rgba(255, 236, 180, 0.4);
+            display: inline-block;
+            padding-top: 0.7rem;
+            margin-top: 0.4rem;
+        }
+
+        .blog-content {
+            padding: 2rem 2rem 2.8rem;
+        }
+
+        /* Quranic & special styling */
+        .quran-highlight {
+            background-color: #faf1df;
+            border-right: 6px solid #c49a6c;
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+            font-style: normal;
+            border-radius: 20px;
+            font-size: 1rem;
+            color: #2c3e2b;
+            font-family: 'Segoe UI', 'Georgia', monospace;
+            line-height: 1.6;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+        }
+
+        .quran-highlight i,
+        .quran-highlight em {
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .arabic-ornament {
+            font-size: 1.3rem;
+            letter-spacing: 4px;
+            color: #b99470;
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin: 1.6rem 0 0.8rem;
+            color: #2b4b3a;
+            border-left: 5px solid #d4af7a;
+            padding-left: 1rem;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.6rem;
+            color: #3e5d4c;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        .dropcap:first-letter {
+            font-size: 3.2rem;
+            font-weight: 700;
+            float: left;
+            line-height: 0.85;
+            margin-right: 0.5rem;
+            color: #b56a2c;
+            font-family: 'Georgia', serif;
+        }
+
+        ul,
+        ol {
+            margin: 1rem 0 1.2rem 2rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        .prophetic-saying {
+            background: #f3efdd;
+            padding: 1rem 1.6rem;
+            border-radius: 28px;
+            margin: 1.5rem 0;
+            font-style: normal;
+            border-left: 4px solid #dbb67b;
+            font-family: 'Segoe UI', 'Merriweather', serif;
+        }
+
+        .prophetic-saying strong {
+            color: #956b42;
+        }
+
+        .note-callout {
+            background: #e9f0e6;
+            padding: 0.9rem 1.5rem;
+            border-radius: 20px;
+            margin: 1.2rem 0;
+            font-size: 0.98rem;
+            border: 1px solid #ccddc3;
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, #e2cfb3, transparent);
+        }
+
+        footer {
+            background: #f4efe5;
+            padding: 1.2rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #6a5a48;
+            border-top: 1px solid #e4d9cb;
+            font-family: monospace;
+        }
+
+        @media (max-width: 640px) {
+            .blog-content {
+                padding: 1.5rem;
+            }
+
+            .blog-header h1 {
+                font-size: 1.7rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        .verse-reference {
+            font-family: monospace;
+            font-size: 0.9rem;
+            background: #f4efdd;
+            padding: 0.1rem 0.3rem;
+            border-radius: 8px;
+        }
+
+        .italic-arabic {
+            font-style: italic;
+            color: #7a5b3a;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blog-container">
+        <div class="blog-header">
+            <h1>📖 The Story of Haaroot & Maaroot</h1>
+            <div class="subhead">A trial from the heavens · Magic · Faith & protection in Islam</div>
+        </div>
+        <div class="blog-content">
+            <p class="dropcap">Among the profound narratives in the Quran is the story of two angels, Haaroot and
+                Maaroot, sent down to the city of Babylon as a divine test for humanity. Allah, the All‑Wise, reveals in
+                Surah Al‑Baqarah (2:102) the reality behind magic, the slander against Prophet Sulaymaan (Solomon), and
+                how the Children of Israel turned away from the truth, indulging in what harmed them instead of the Book
+                of Allah.</p>
+
+            <div class="quran-highlight">
+                <strong>📜 Quran 2:102 (interpretation of the meaning):</strong><br>
+                “And they followed [instead] what the devils had recited during the reign of Sulaymaan. It was not
+                Sulaymaan who disbelieved, but the devils disbelieved, teaching people magic and that which was revealed
+                to the two angels at Babylon, Haaroot and Maaroot. But they [the two angels] do not teach anyone unless
+                they say: 'We are a trial, so do not disbelieve [by practicing magic].' And yet they learn from them
+                that by which they cause separation between a man and his wife. But they do not harm anyone through it
+                except by permission of Allah...”
+            </div>
+
+            <h2>🔹 Turning Away From the Book of Allah</h2>
+            <p>The Children of Israel had been given the Tawraah (Torah), yet a faction among them disregarded it,
+                casting the Scripture behind their backs as if they knew nothing. As a consequence, Allah busied them
+                with futile matters and plunged them into misguidance. Whoever shuns the worship of the Most Merciful
+                becomes afflicted with idol worship; whoever shuns the truth will be left with falsehood. The Jews
+                during and after the reign of Sulaymaan (peace be upon him) refused to believe, and thus followed the
+                fabrications of the devils who falsely claimed that Sulaymaan ruled by magic.</p>
+
+            <div class="note-callout">
+                💡 <strong>Divine justice:</strong> When a people abandon what benefits them — divine guidance,
+                monotheism, the Sunnah — they become trapped in innovations, blind imitation, and the traps of Shaytan.
+                The story of Haaroot and Maaroot is a living lesson about trial, free will, and the grave consequences
+                of sorcery.
+            </div>
+
+            <h2>🔹 The Two Angels: A Test From Allah</h2>
+            <p>Allah sent Haaroot and Maaroot not to promote disbelief, but as a means of tribulation. Before teaching
+                any form of magic, the angels would firmly warn: <em>“We are a trial, so do not disbelieve.”</em> Only
+                those who insisted on learning, despite the warning, were taught. Their knowledge included what could
+                separate a husband and wife — but such harm only occurs by the will of Allah, and the magician chooses
+                disbelief by practicing it. Magic is a reality, not mere illusion, and its effects are severe, yet it
+                remains under the ultimate decree of Allah.</p>
+
+            <h2>⚡ The Reality of Magic & Its Evil Consequences</h2>
+            <p>Allah describes marriage as a bond of affection and mercy (Quran 30:21), yet magic can shatter that bond,
+                turning love into hatred, or causing a person to imagine repulsive things about their spouse. Magicians
+                may bewitch the eyes — as the sorcerers of Pharaoh did, making ropes appear as snakes — or create
+                discord between loved ones. The Prophet (ﷺ) said: <strong>“Satan places his throne on water, then sends
+                    his troops… the closest to him is the one who causes the most mischief, especially separating a man
+                    from his wife.”</strong> (Muslim).</p>
+
+            <div class="prophetic-saying">
+                🌙 <strong>Prophetic warning:</strong> “The punishment for the magician is that he must be beheaded.”
+                (At‑Tirmidhi & Al‑Haakim). Magic constitutes apostasy, nullifying one’s deeds even if they pray or fast.
+            </div>
+
+            <h2>📿 The Correct Way to Seek Cure From Magic</h2>
+            <p>It is strictly forbidden to approach fortune‑tellers or magicians to remove spells. The Prophet (ﷺ) said:
+                <em>“He who approaches a magician and believes what he says will have his prayers rejected for forty
+                    days.”</em> (Muslim). Instead, the legislated Ruqyah (Quranic recitation and authentic
+                supplications) is the remedy. Surah Al‑Faatihah, Ayat‑ul‑Kursi (2:255), Al‑Ikhlas, Al‑Falaq, and An‑Naas
+                are powerful means. The following prophetic du‘a is also highly recommended:</p>
+            <div class="quran-highlight" style="background:#e4d9c5;">
+                <strong>“Allaahumma Rabban‑naas, athhibil‑ba’s, washfi, Antash‑Shaafi, laa shifaa’a illaa shifaa’uka,
+                    shifaa’an laa yughaadiru saqama.”</strong><br>
+                (O Allah, Lord of mankind, remove the harm and cure. You are the Curer. There is no cure except Your
+                cure, a cure that leaves no disease.) – Al‑Bukhari
+            </div>
+            <p>Some of the righteous predecessors (such as Wahb ibn Munabbih) recommended reciting Quranic verses
+                addressing magic (from Surah Al‑A‘raaf, Yoonus, Taa Haa) over water, mixing crushed lote‑tree leaves,
+                and bathing with it — a method known to be beneficial by experience, while always relying on Allah
+                alone.</p>
+
+            <h2>🌟 The Prophet (ﷺ) & The Incident of Magic</h2>
+            <p>‘Aa’ishah (may Allah be pleased with her) narrated that a Jew named Labeed ibn Al‑A‘sam bewitched the
+                Prophet (ﷺ) so that he would imagine doing things he had not done. Jibreel informed him of the location
+                of the talisman — inside a well called Tharwaan, under a rock, inside a pollen sheath with a comb and
+                knotted hair. The Prophet (ﷺ) recovered through Allah’s power and did not execute the magician publicly,
+                fearing that people might then accuse innocent believers without clear evidence. This shows his immense
+                mercy and wisdom in preserving justice.</p>
+            <p>Some might ask: “How could a prophet be bewitched?” The answer is that the magic only affected worldly
+                matters — specifically his relations with his wives — and never touched his mind, memory, or the
+                revelation. Allah protected him from being prevented from conveying the message, as promised in Surah
+                Al‑Ma’idah (5:67), yet he was tested with harm from disbelievers, hunger, and even a pit, but his
+                mission remained intact.</p>
+
+            <h2>⚖️ Rulings, Misconceptions & Final Warnings</h2>
+            <p>Any form of magic — even if claimed to be for “reconciliation” or “love” — is haram and constitutes
+                disbelief. Ends never justify evil means. Wearing amulets for protection against magic is a form of
+                shirk (associating partners with Allah) and only weakens one’s faith. Moreover, some fabricated
+                narrations like “Learn magic but do not teach it” are lies attributed to the Prophet (ﷺ).</p>
+            <div class="note-callout">
+                🕋 <strong>Important:</strong> The most skilled magicians historically were often from among those who
+                abandoned Allah’s scripture; the Jews became known for sorcery after shunning the prophethood of
+                Muhammad (ﷺ). Magic causes separation, oppression, and sometimes even death. A magician who kills by
+                sorcery is to be executed as a murderer.
+            </div>
+
+            <h2>📖 Lessons From the Story of Haaroot & Maaroot</h2>
+            <ul>
+                <li>✔ Magic is a reality, not mere illusion, and practicing it is an act of disbelief.</li>
+                <li>✔ Allah tests His servants with trials — the angels themselves were a test to distinguish the
+                    believers from the wicked.</li>
+                <li>✔ Turning away from the Book of Allah leads to falling into satanic traps and destructive habits.
+                </li>
+                <li>✔ The only protection and cure lie in the Quran, prophetic supplications, and sincere reliance on
+                    Allah, not in counter‑magic.</li>
+                <li>✔ Spouses must safeguard their marriage with faith, prayer, and ruqyah, especially because shaytan
+                    works hardest to separate husband and wife.</li>
+                <li>✔ A Muslim never approaches a magician, fortune‑teller, or astrologer — doing so nullifies one’s
+                    prayers for forty days and diminishes faith.</li>
+            </ul>
+
+            <div class="quran-highlight">
+                🌿 <strong>Quran 2:102 (continued):</strong> “But they [the Children of Israel] certainly knew that
+                whoever purchased it [magic] would not have in the Hereafter any share. And wretched is that for which
+                they sold themselves, if they only knew.”
+            </div>
+
+            <p>The story of Haaroot and Maaroot echoes through time as a sobering reminder. Magic may appear impressive,
+                but its spiritual price is eternal loss. Instead, believers hold firmly to the Quran, the Sunnah, and
+                the remembrance of Allah, seeking refuge in Him from the whisperers and from the trials of this world.
+                May Allah protect us from every harm and grant us steadfastness upon the truth.</p>
+
+            <hr>
+            <p style="font-size:0.9rem; text-align:center; color:#7b6b58;">✧ Based on authentic Quranic exegesis and
+                classical commentaries from the Salaf ✧<br>And Allah knows best.</p>
+        </div>
+        <footer>
+            🕌 Reflecting on Surah Al-Baqarah (2:102) · The story of Haaroot & Maaroot · Islam’s decisive stance against
+            magic
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Complete Guide to Ramadan | Blessings, Fasting, Health & Spirituality</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #fef9e6 0%, #fff5e0 100%);
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', 'Georgia', serif;
+            color: #2c2b28;
+            line-height: 1.55;
+            padding: 0 0 3rem 0;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* header */
+        .ramadan-header {
+            background: linear-gradient(135deg, #1e3c2c 0%, #2a5a3a 100%);
+            border-radius: 0 0 48px 48px;
+            margin-bottom: 2rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ramadan-header::before {
+            content: "☪";
+            font-size: 220px;
+            opacity: 0.08;
+            position: absolute;
+            right: -30px;
+            bottom: -70px;
+            font-weight: 400;
+            pointer-events: none;
+            color: #ffd966;
+        }
+
+        .header-content {
+            padding: 2.5rem 1.5rem 2.8rem 1.5rem;
+            text-align: center;
+        }
+
+        .header-content h1 {
+            font-size: 2.9rem;
+            font-weight: 700;
+            color: #ffefc0;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            margin-bottom: 0.5rem;
+        }
+
+        .header-content p {
+            font-size: 1.2rem;
+            color: #e9f5e1;
+            max-width: 750px;
+            margin: 1rem auto 0;
+            font-style: italic;
+        }
+
+        .badge {
+            background: #d9a13b;
+            display: inline-block;
+            padding: 0.3rem 1.2rem;
+            border-radius: 60px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #2c2418;
+            margin-top: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* chapters layout */
+        .chapters-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .chapter-card {
+            background: #ffffffdd;
+            backdrop-filter: blur(2px);
+            border-radius: 48px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+            overflow: hidden;
+            transition: all 0.2s ease;
+            border: 1px solid #ffe5b4;
+        }
+
+        .chapter-card:hover {
+            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.12);
+            background: #ffffff;
+        }
+
+        .chapter-title-section {
+            background: #fdf3e0;
+            padding: 1.2rem 2rem;
+            border-bottom: 3px solid #e0b354;
+        }
+
+        .chapter-title-section h2 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #2b4b2f;
+            letter-spacing: -0.3px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .chapter-title-section h2 span {
+            background: #e0b354;
+            font-size: 1rem;
+            padding: 4px 12px;
+            border-radius: 60px;
+            color: #2d2b1f;
+            font-weight: 500;
+        }
+
+        .topics-container {
+            padding: 0 2rem 1.8rem 2rem;
+            background: #fffef9;
+        }
+
+        .topic-item {
+            margin-top: 2rem;
+            border-bottom: 1px solid #f0e2cc;
+            padding-bottom: 1.8rem;
+        }
+
+        .topic-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .topic-title {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #b4652a;
+            margin-bottom: 0.75rem;
+            border-left: 5px solid #e0b354;
+            padding-left: 18px;
+        }
+
+        .topic-detail {
+            font-size: 1rem;
+            color: #2d3e2b;
+            overflow-x: auto;
+        }
+
+        .topic-detail p,
+        .topic-detail blockquote,
+        .topic-detail ul,
+        .topic-detail ol,
+        .topic-detail h1,
+        .topic-detail h2,
+        .topic-detail h3,
+        .topic-detail h4 {
+            margin-bottom: 1rem;
+        }
+
+        .topic-detail blockquote {
+            background: #faf1e0;
+            border-left: 6px solid #dba643;
+            padding: 0.8rem 1.5rem;
+            margin: 1rem 0;
+            border-radius: 20px;
+            font-style: normal;
+            color: #4a3a28;
+        }
+
+        .topic-detail ul,
+        .topic-detail ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .topic-detail li {
+            margin: 0.4rem 0;
+        }
+
+        .topic-detail strong {
+            color: #aa5e1b;
+        }
+
+        .topic-detail a {
+            color: #2c6e2c;
+            text-decoration: underline;
+        }
+
+        .topic-detail h2,
+        .topic-detail h3,
+        .topic-detail h4 {
+            color: #2b5e2f;
+            margin-top: 1.2rem;
+        }
+
+        hr {
+            margin: 1rem 0;
+            border-color: #eedbba;
+        }
+
+        @media (max-width: 780px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .chapter-title-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .topic-title {
+                font-size: 1.4rem;
+            }
+
+            .header-content h1 {
+                font-size: 2rem;
+            }
+
+            .topics-container {
+                padding: 0 1rem 1.5rem 1rem;
+            }
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3.5rem;
+            padding: 2rem 1rem;
+            border-top: 1px solid #ecd9b4;
+            font-size: 0.9rem;
+            color: #6f5a3a;
+        }
+
+        .back2top {
+            position: fixed;
+            bottom: 30px;
+            right: 25px;
+            background: #b87c2e;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: 0.2s;
+            border: none;
+            opacity: 0.8;
+        }
+
+        .back2top:hover {
+            background: #8b5a2a;
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ramadan-header">
+        <div class="container">
+            <div class="header-content">
+                <h1>🌙 Guide to Ramadan & Fasting</h1>
+                <p>The blessed month of mercy, forgiveness, and spiritual elevation — comprehensive guidance from Quran,
+                    Hadith, and expert health advice.</p>
+                <div class="badge">📖 Complete reference | 9 Chapters | 50+ topics</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="chapters-list">
+            <!-- CHAPTER 1: What Is Ramadan? -->
+            <div class="chapter-card">
+                <div class="chapter-title-section">
+                    <h2><span>📖 Chapter 1</span> What Is Ramadan?</h2>
+                </div>
+                <div class="topics-container">
+                    <div class="topic-item">
+                        <div class="topic-title">What is Ramadan?</div>
+                        <div class="topic-detail">
+                            <p>Ramadan / Ramadhaan / Ramazan is the 9th month in the&nbsp;Islamic calendar, known as the
+                                <strong>‘Hijri Calendar’</strong> <span style="color: #999999;">[Arabic language Hijri
+                                    is the calendar of migration. It starts from the day the Prophet Mohammed (S.A.W.)
+                                    migrated from&nbsp;Makkah&nbsp;to&nbsp;Madinah]</span>. Millions of Muslims across
+                                the world observe fast during the whole month of Ramadan as this is the most sacred
+                                month of the year in Islamic culture.&nbsp;</p>
+                            <p>The Arabic word <strong>‘Ramad’</strong> means heat or drought. So Ramadan symbolizes
+                                abstinence from eating anything and drinking water from dawn till dusk.</p>
+                            <p>As one of&nbsp;Islam’s five pillars,&nbsp;fasting in Ramadan&nbsp;was prescribed by Allah
+                                as an obligatory act for all those&nbsp;who are able to. Fasting, however, is more than
+                                just a simple act of worship. It has a holistic influence on our physical and mental
+                                states, offering benefit for both.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Month of Revelation of Quran:</div>
+                        <div class="topic-detail">
+                            <p>Besides fasting, this month also significant for all the Muslims because Quran was
+                                revealed to the Prophet Mohammed (S.A.W.) during this holy month. As Allah says in
+                                Quran:</p>
+                            <blockquote><span style="color: #999999;">“The month of Ramadan in which was revealed the
+                                    Quran, a guidance for mankind and clear proofs for the guidance and the criterion
+                                    (between right and wrong). So whoever of you sights (the crescent on the first night
+                                    of) the month (of Ramadan i.e. is present at his home), he must observe Sawm (fasts)
+                                    that month…” (Surah Al-Baqarah 2:185)</span></blockquote>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Fasting is Obligatory during this month:</div>
+                        <div class="topic-detail">
+                            <p>In Arabic, the word<strong> ‘Sawm/Siyam’</strong> (Fasting) means to abstain or refrain
+                                from something. It means to refrain from food, drink, sexual intercourse and all that
+                                which breaks the fast from dawn till dusk (sunset) with only intention to do so for
+                                obedience to Allah.</p>
+                            <p>The fast is intended to bring the faithful closer to Allah and to remind them of the
+                                suffering of those less fortunate. Ramadan is a time to detach oneself from worldly
+                                pleasures and focus on one's inner self. It is seen as a way to physically and
+                                spiritually purify, refraining from habits such as smoking and caffeine etc. Muslims
+                                often donate to charities during the month and feed the hungry.</p>
+                            <p>As Almighty Allah says in Quran:</p>
+                            <blockquote><span style="color: #999999;">“Oh you who believe! Fasting is prescribed to you
+                                    as it was prescribed to those before you, that you may learn piety and
+                                    righteousness.”&nbsp;(Surah Al-Baqarah: 2:183)</span></blockquote>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Allah increases reward of Obligation by Seventy times:</div>
+                        <div class="topic-detail">
+                            <p>Salmaan Farsi (R.A.) says that on the last day of Shabaan, Prophet Mohammad (S.A.W.)
+                                spoke us and said:</p>
+                            <blockquote><span style="color: #999999;">‘O People, there comes to you a great month now, a
+                                    most blessed month, in which is a night greater in value and goodness than a
+                                    thousand months. It is a month in which Allah Has made fasting fardh (obligatory) by
+                                    day and has made Sunnah the Taraweeh Salah by night. Whosoever wants to be close to
+                                    Allah by doing any good deed, for such person shall be the reward like the one who
+                                    had performed a fardh in any other time and whoever performs a fardh (obligation),
+                                    shall be given the reward of seventy faraaidh (obligations) in any other
+                                    time.’</span></blockquote>
+                            <p>This is indeed the month of patience and the reward for true patience is paradise
+                                (Jannah). It is the month of showing kindness to everyone. Whosoever feeds a fasting
+                                person in order to break the fast at iftaar (sunset), for him there shall be forgiveness
+                                of sins and freedom from the fire of Jahannam (hell) and he shall receive the same
+                                reward as the fasting person.</p>
+                            <p>As narrated by Abu Hurairah (R.A.), The Messenger of Allah (S.A.W.) said:&nbsp;</p>
+                            <blockquote><span style="color: #999999;">“On the first night of the month of Ramadan, the
+                                    Shayatin (Satan/Devil) are shackled, the Jinns are restrained, the gates of the
+                                    Fires (Hell) are shut such that no gate among them would be opened. The gates of
+                                    Paradise (Jannah) are opened such that no gate among them would be closed, and a
+                                    caller calls: 'O seeker of the good; come near!' and 'O seeker of evil; stop! For
+                                    there are those whom Allah frees from the Fire.' And that is every
+                                    night”&nbsp;(Tirmidhi: 682)</span></blockquote>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Gifts of Ramadan from Allah:</div>
+                        <div class="topic-detail">
+                            <p>As narrated by Abu Hurairah (R.A.), The Messenger of Allah (S.A.W.) said:&nbsp;</p>
+                            <blockquote><span style="color: #999999;">“Allah said, 'All the deeds of Adam's sons
+                                    (people) are for them, except fasting which is for Me, and I will give the reward
+                                    for it.' Fasting is a shield or protection from the fire (Hell) and from committing
+                                    sins... There are two pleasures for the fasting person, one at the time of breaking
+                                    his fast, and the other at the time when he will meet his Lord; then he will be
+                                    pleased because of his fasting.”&nbsp;(Sahih Bukhari: 1904)</span></blockquote>
+                            <p>The month of Ramadan is also distinguished by Laylat ul Qadr (The night of Decree). Allah
+                                says: <strong>“The night of Al-Qadr is better than a thousand months”</strong> (Surah
+                                Al-Qadr 97:3).</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Unfortunate People would not get forgiveness from Allah in Ramadan:
+                        </div>
+                        <div class="topic-detail">
+                            <p>Messenger of Allah (S.A.W.) told us:
+                            <blockquote><span style="color: #999999;">“There may be people who fast and get nothing from
+                                    their fast except hunger, and there may be those who pray qiyaam and get nothing
+                                    from their qiyaam but a sleepless night.” (Ibn Majah: 1690)</span></blockquote>
+                            Ramadan is the month of Allah’s mercy; if one spends it carelessly, how can he expect
+                            forgiveness?</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Supplication (Dua) of a Fasting Person is surely accepted by Allah:
+                        </div>
+                        <div class="topic-detail">
+                            <p>Abu Hurairah (R.A.) reports that Prophet Mohammad (S.A.W.) said:&nbsp;
+                            <blockquote><span style="color: #999999;">“There are three whose supplications are not
+                                    turned back: A just ruler, and a fasting person until he breaks his fast...” (Ibn
+                                    Majah: 1752)</span></blockquote>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHAPTER 2: Fasting Soothes The Stomach -->
+            <div class="chapter-card">
+                <div class="chapter-title-section">
+                    <h2><span>📖 Chapter 2</span> Fasting Soothes The Stomach.</h2>
+                </div>
+                <div class="topics-container">
+                    <div class="topic-item">
+                        <div class="topic-title">Fasting Soothes The Stomach.</div>
+                        <div class="topic-detail">
+                            <p><strong>By: Dr Muhammad Karim Islamabadi</strong></p>
+                            <p>Ramadan fasting has a healing effect on peptic ulcers as it curbs smoking. The whole
+                                gastro-intestinal system takes good rest for the first time in the whole year. Digestion
+                                is a huge integrated system; fasting reduces burden on salivary glands, stomach,
+                                intestines, pancreas and liver. Ramadan lifts the heavy burden and gives a refreshing
+                                annual vacation of 30 days. The taste buds rest, so at Iftar the food tastes more
+                                pleasant. The Prophet (S.A.W.) said: <em>“There are two pleasures for the fasting
+                                    person, one at the time of breaking his fast and the other when he meets his
+                                    Lord.”</em></p>
+                            <h2>May you and your family be blessed with good health, fulfilment and lasting happiness
+                                during Ramadan.</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHAPTER 3: Blessings Of Ramadan & Fasting -->
+            <div class="chapter-card">
+                <div class="chapter-title-section">
+                    <h2><span>📖 Chapter 3</span> Blessings Of Ramadan & Fasting.</h2>
+                </div>
+                <div class="topics-container">
+                    <div class="topic-item">
+                        <div class="topic-title">Importance and Blessings of Ramadan:</div>
+                        <div class="topic-detail">
+                            <blockquote><span style="color: #999999;">“O you who have believed, decreed upon you is
+                                    fasting as it was decreed upon those before you that you may become righteous.”
+                                    (Surah Al-Baqarah 2:183)</span></blockquote>
+                            <p>Ramadan is the ninth month and the chief of all months. Muslims fast during day, offer
+                                Salat-e-Taraweeh, perform I'tikaf in last ten days, and the Quran was revealed. The
+                                Battle of Badr and Conquest of Makkah also took place in this month. Abu Huraira (R.A.)
+                                narrated that Prophet (S.A.W.) said: “Whoever fasts Ramadan out of faith and hope for
+                                reward, his past sins will be forgiven.”</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Rules of Fasting:</div>
+                        <div class="topic-detail">
+                            <p><strong>Intention of Fasting:</strong> Intention is a condition for the fast.
+                                <strong>Common factors which nullify the Fast:</strong> Medication through nose/ears,
+                                intentional vomiting, swallowing items not normally eaten, smoking, eating after Suhoor
+                                mistakenly, making Iftar before sunset, etc.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Message:</div>
+                        <div class="topic-detail">
+                            <h4><strong>We ask Almighty Allah to strengthen our faith in Ramadan, accept our fasts,
+                                    supplications and reward us with His forgiveness and the highest place in Paradise.
+                                    AMEEN</strong></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHAPTER 4: How To Fast Healthily During Ramadan -->
+            <div class="chapter-card">
+                <div class="chapter-title-section">
+                    <h2><span>📖 Chapter 4</span> How To Fast Healthily During Ramadan.</h2>
+                </div>
+                <div class="topics-container">
+                    <div class="topic-item">
+                        <div class="topic-title">Introduction:</div>
+                        <div class="topic-detail">
+                            <p>With the fast of Ramadan upon us, here are simple guidelines to maintain a balanced and
+                                healthy diet whilst fasting.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Don't skip breakfast:</div>
+                        <div class="topic-detail">
+                            <p>Even though sleep may be more appealing, don't skip Suhoor. Breakfast provides essential
+                                nutrients, prevents headaches and fatigue, and gets metabolic rates up.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Eat a wide variety of foods:</div>
+                        <div class="topic-detail">
+                            <p>Select foods from all groups: grains, fruits & vegetables, meat/fish, dairy, and limit
+                                fats/sugars. Use low glycemic index foods at Suhoor to control blood sugar and hunger.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Be aware of your cooking methods:</div>
+                        <div class="topic-detail">
+                            <p>Trim fat, remove poultry skin, bake/grill instead of frying, use non-stick sprays, steam
+                                vegetables, use herbs and spices instead of excess salt. Cut fat in recipes by half, use
+                                skim milk instead of cream.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Remember your fruits and vegetables:</div>
+                        <div class="topic-detail">
+                            <p>Fruit and vegetables are protective foods rich in vitamins, minerals and fiber, low in
+                                calories.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Drink sufficient fluid:</div>
+                        <div class="topic-detail">
+                            <p>Always include water, limit caffeine (diuretic effect) to stay hydrated.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHAPTER 5: Health Guidelines For Ramadan -->
+            <div class="chapter-card">
+                <div class="chapter-title-section">
+                    <h2><span>📖 Chapter 5</span> Health Guidelines For Ramadan.</h2>
+                </div>
+                <div class="topics-container">
+                    <div class="topic-item">
+                        <div class="topic-title">Introduction:</div>
+                        <div class="topic-detail">
+                            <p>Our diet during Ramadan should be simple: slow-digesting foods (complex carbs like
+                                barley, oats, beans) last up to 8 hours, while fast-digesting foods (sugar, white flour)
+                                last 3-4 hours. Include fiber-rich foods.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Foods to AVOID during Ramadan:</div>
+                        <div class="topic-detail">
+                            <ul>
+                                <li>Fried and fatty foods</li>
+                                <li>Foods containing too much sugar</li>
+                                <li>Over-eating especially in Suhoor</li>
+                                <li>Too much tea in Suhoor (increases urination)</li>
+                                <li>Smoking cigarettes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Food should EAT during Ramadan:</div>
+                        <div class="topic-detail">
+                            <ul>
+                                <li>Complex carbohydrates in Suhoor</li>
+                                <li>Haleem/Daleem (slow-burning protein)</li>
+                                <li>Dates (sugar, fiber, potassium)</li>
+                                <li>Almonds, bananas</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">DRINKS during Ramadan:</div>
+                        <div class="topic-detail">
+                            <p>As much water or fruit juices as possible between Iftar and bedtime.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">CONSTIPATION:</div>
+                        <div class="topic-detail">
+                            <p><strong>Causes:</strong> Too much refined foods, too little water, not enough fiber.
+                                <strong>Remedy:</strong> Increase water, use bran, brown flour.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">INDIGESTION and WIND:</div>
+                        <div class="topic-detail">
+                            <p><strong>Causes:</strong> Over-eating, fried foods, spicy foods, carbonated drinks.
+                                <strong>Remedy:</strong> Do not over-eat, drink water or fruit juices.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">LETHARGY (low blood pressure):</div>
+                        <div class="topic-detail">
+                            <p><strong>Causes:</strong> Too little fluid, decreased salt intake.
+                                <strong>Remedy:</strong> Keep cool, increase fluid and salt intake.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">HEADACHE:</div>
+                        <div class="topic-detail">
+                            <p><strong>Causes:</strong> Caffeine and tobacco-withdrawal, lack of sleep.
+                                <strong>Remedy:</strong> Cut down caffeine slowly before Ramadan, reorganize schedule.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">LOW BLOOD SUGAR:</div>
+                        <div class="topic-detail">
+                            <p><strong>Causes:</strong> Too much sugar at Suhoor causing insulin spike.
+                                <strong>Remedy:</strong> Limit sugar-containing foods, eat balanced Suhoor.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">MUSCLE CRAMPS:</div>
+                        <div class="topic-detail">
+                            <p><strong>Remedy:</strong> Eat foods rich in calcium, magnesium, potassium: vegetables,
+                                fruit, dairy, dates.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">PEPTIC ULCERS, HEART BURN, GASTRITIS AND HIATUS HERNIA:</div>
+                        <div class="topic-detail">
+                            <p>Increased acid levels may worsen symptoms. Consult doctor before Ramadan for medications.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">KIDNEY STONES:</div>
+                        <div class="topic-detail">
+                            <p>Drink extra liquids to prevent stone formation.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">JOINT PAINS:</div>
+                        <div class="topic-detail">
+                            <p><strong>Remedy:</strong> Lose weight, exercise lower limbs before Ramadan to prepare for
+                                additional strain during Salah.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Message:</div>
+                        <div class="topic-detail">
+                            <h4>May Allah make us of the successful in Ramadan and make it easy for us to turn to Him
+                                completely and perpetually. Ameen.</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHAPTER 6: Virtues Of Fasting And Ramadan -->
+            <div class="chapter-card">
+                <div class="chapter-title-section">
+                    <h2><span>📖 Chapter 6</span> Virtues Of Fasting And Ramadan.</h2>
+                </div>
+                <div class="topics-container">
+                    <div class="topic-item">
+                        <div class="topic-title">Fasting in Ramadan is Obligation (Fardh):</div>
+                        <div class="topic-detail">
+                            <p>It was narrated that Abu Umamah (R.A.) said: 'I said: O Messenger of Allah, which deed is
+                                best?' He (S.A.W.) said: “Take to fasting, for there is nothing equal to it.” (An-Nasai:
+                                2224)</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">The reward for Fasting is immense:</div>
+                        <div class="topic-detail">
+                            <p>Allah said: “All the deeds of Adam's sons are for them, except fasting which is for Me,
+                                and I will give the reward for it.” (Sahih Bukhari: 1904). Also, there is a gate in
+                                Paradise called Ar-Raiyan through which only those who fasted will enter.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Fasting is a shield against the Fire:</div>
+                        <div class="topic-detail">
+                            <p>The Prophet (S.A.W.) said: “Fasting is a shield or protection from the fire (Hell) and
+                                from committing sins.” (Bukhari). Also, “Anyone who fasts one day for Allah's Pleasure,
+                                Allah will keep his face away from Hell for seventy years.”</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Fasting is a means for one's sins to be forgiven:</div>
+                        <div class="topic-detail">
+                            <p>“Whoever observes fasts during the month of Ramadan out of sincere faith, and hoping to
+                                attain Allah's rewards, then all his past sins will be forgiven.” (Sahih Bukhari: 38)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">The supplication of the fasting person is answered:</div>
+                        <div class="topic-detail">
+                            <p>“There are three whose supplications are not turned back: ... a fasting person until he
+                                breaks his fast.” (Ibn Majah: 1752)</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">The fasting person will be among the true followers of the prophets and
+                            the martyrs:</div>
+                        <div class="topic-detail">
+                            <p>Prophet (S.A.W.) said: “Whoever dies on that (fasting and praying) will be among the
+                                Siddiqeen and the martyrs.” (Sahih Ibn Hibban)</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Fasting is a shield against one's base desires:</div>
+                        <div class="topic-detail">
+                            <p>“O young men! Whoever among you is not able to marry, then let him fast, for indeed
+                                fasting will diminish his sexual desire.” (Tirmidhi: 1081)</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Doors of Paradise Open, Doors of Hell Closed:</div>
+                        <div class="topic-detail">
+                            <p>The Messenger of Allah said: “When the month of Ramadan starts, the gates of the heaven
+                                are opened and the gates of Hell are closed and the devils are chained.” (Sahih Bukhari:
+                                1899)</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Message:</div>
+                        <div class="topic-detail">
+                            <h1><strong>We pray to Allah to make for us this Ramadan a shield from Hell Fire.</strong>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHAPTER 7: Ramadan And Fasting -->
+            <div class="chapter-card">
+                <div class="chapter-title-section">
+                    <h2><span>📖 Chapter 7</span> Ramadan And Fasting.</h2>
+                </div>
+                <div class="topics-container">
+                    <div class="topic-item">
+                        <div class="topic-title">Introduction:</div>
+                        <div class="topic-detail">
+                            <p>Ramadan, the ninth month of the Islamic lunar calendar, may be 29 or 30 days long. It
+                                begins with the sighting of the new crescent after sunset.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">The Significance of Ramadan and Fasting:</div>
+                        <div class="topic-detail">
+                            <p>Allah says: “The month of Ramadan in which was revealed the Quran, a guidance for
+                                mankind...” (Surah Al-Baqarah 2:185). Muslims recite Quran frequently this month.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Sawm or Fasting:</div>
+                        <div class="topic-detail">
+                            <p>Sawm means a fast that begins with dawn and ends with sunset. Muslims eat Suhur before
+                                dawn, break fast with dates and water at Maghrib, then pray Tarawih after Isha.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Tarawih Prayer:</div>
+                        <div class="topic-detail">
+                            <p>Nightly congregational prayer after Isha. A Hafiz recites the Quran in portions,
+                                completing it by end of Ramadan.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Ramadan Generosity:</div>
+                        <div class="topic-detail">
+                            <p>People are more generous, feed the needy, give Zakat and donations seeking multiplied
+                                rewards.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Laylat-ul-Qadr:</div>
+                        <div class="topic-detail">
+                            <p>The Night of Decree is better than a thousand months. Angels descend with peace. It
+                                occurs in the odd nights of the last ten days of Ramadan.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">I'tikaaf or Seclusion:</div>
+                        <div class="topic-detail">
+                            <p>The Prophet (S.A.W.) used to practice I'tikaf in the last ten days of Ramadan, staying in
+                                the mosque for worship.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Sadaqa Al-Fitr / Zakat Al-Fitr:</div>
+                        <div class="topic-detail">
+                            <p>Obligatory charity given before Eid prayers on behalf of each family member, allowing the
+                                poor to celebrate.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Eid ul Fitr:</div>
+                        <div class="topic-detail">
+                            <p>Celebrated on the 1st of Shawwal. Muslims perform Eid prayer in congregation, exchange
+                                greetings, and thank Allah for completing Ramadan.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Umrah or Minor Hajj in Ramadan:</div>
+                        <div class="topic-detail">
+                            <blockquote><span style="color: #999999;">Prophet Muhammad (S.A.W.) said: “Performing Umrah
+                                    in the month of Ramadan is equal to performing a major Hajj.” (Tirmidhi: 939)</span>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHAPTER 8: Goals Of Fasting -->
+            <div class="chapter-card">
+                <div class="chapter-title-section">
+                    <h2><span>📖 Chapter 8</span> Goals Of Fasting.</h2>
+                </div>
+                <div class="topics-container">
+                    <div class="topic-item">
+                        <div class="topic-title">Goals Of Fasting.</div>
+                        <div class="topic-detail">
+                            <p><strong>1. Achieving At-Taqwa</strong> – piety and fear of Allah. <strong>2. Acquiring
+                                    immense rewards</strong> – Allah Himself rewards fasting. <strong>3. Two moments of
+                                    happiness</strong> – at breaking fast and meeting Allah. <strong>4. Purifies the
+                                    soul</strong> and defeats desires. <strong>5. Being saved from the Fire</strong>.
+                                <strong>6. Intercession</strong> – fasting and Quran will intercede. <strong>7.
+                                    Forgiveness of sins</strong> – Ramadan to Ramadan erases sins if major sins are
+                                avoided.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHAPTER 9: Advice To Muslims In Ramadan -->
+            <div class="chapter-card">
+                <div class="chapter-title-section">
+                    <h2><span>📖 Chapter 9</span> Advice To Muslims In Ramadan.</h2>
+                </div>
+                <div class="topics-container">
+                    <div class="topic-item">
+                        <div class="topic-title">Things to do during Ramadan:</div>
+                        <div class="topic-detail">
+                            <p>Renew commitment to Allah, recite Quran with reflection, repent sincerely, avoid
+                                formalism, strive for Allah's acceptance.</p>
+                        </div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Advice to Muslims in Ramadan:</div>
+                        <div class="topic-detail">
+                            <p>From Shaikh Jaarullah: Fast with belief and seeking reward; Beware of breaking fast
+                                without excuse; Pray Taraweeh and night prayer; Ensure halal food; Give food to fasting
+                                people; Perform prayers on time; Give charity; Perform Umrah; Eat Suhoor; Hasten to
+                                break fast; Recite Quran abundantly; Guard tongue from lies and backbiting; Increase
+                                dhikr and dua; Repent sincerely; Fast six days of Shawwal; Fast on Arafat and Ashura;
+                                Continue taqwa after Ramadan. O Allah, accept from us, Ameen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>🤲 May Allah accept our fasts, prayers, and good deeds. Ramadan Mubarak! — Based on authentic Islamic
+                sources & health guidelines.</p>
+            <p style="margin-top: 0.8rem;">✨ "O you who believe! Fasting is prescribed for you as it was prescribed for
+                those before you, that you may become righteous." (Surah Al-Baqarah 2:183)</p>
+        </footer>
+    </div>
+    <button class="back2top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">⬆️</button>
+</body>
+
+</html>
