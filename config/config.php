@@ -18,8 +18,8 @@ define('DB_PASS', '');
 |--------------------------------------------------------------------------
 */
 
-define('API_KEY', 'lcHeZLnlu52teRw4mlGvDyMqvmR3gJ8U');
-define('API_SECRET', 'gBpP3ZSVvAwyU73eN02wQ6OqERD3CWVL');
+define('API_KEY', '');
+define('API_SECRET', '');
 
 /*
 |--------------------------------------------------------------------------
