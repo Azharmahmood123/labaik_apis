@@ -9,7 +9,7 @@ $validator = new Validator();
 requireMethod('GET');
 
 $isValid = $validator->validate($request->all(), [
-    'surah' => 'required|int|min:1|max:144'
+    'surah' => 'required|int|min:1|max:114'
 ]);
 
 if (!$isValid) {
@@ -35,7 +35,7 @@ try {
             to_ayah AS toAyah,
             ayah_keys AS ayahKeys,
             text
-        FROM tafsir
+        FROM tafsir_ibne_kathir
         WHERE ayah_key LIKE ?
         ORDER BY id ASC
     ");
