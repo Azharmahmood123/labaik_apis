@@ -12,9 +12,15 @@ try {
             id,
             arabic,
             transliteration,
-            enTranslation,
-            urTranslation,
-            enTafsir
+            en_translation AS enTranslation,
+            ur_translation AS urTranslation,
+            hi_translation AS hiTranslation,
+            id_translation AS idTranslation,
+            ar_translation AS arTranslation,
+            bn_translation AS bnTranslation,
+            tr_translation AS trTranslation,
+            fa_translation AS faTranslation,
+            fr_translation AS frTranslation
         FROM ayatul_kursi
         ORDER BY id ASC
     ");

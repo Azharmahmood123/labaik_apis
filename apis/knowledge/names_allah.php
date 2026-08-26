@@ -9,17 +9,15 @@ try {
     $result = $conn->query("
         SELECT
             id,
-            name_image         AS nameImage,
-            name_arabic        AS nameArabic,
+            name_arabic          AS nameArabic,
             name_transliteration AS nameTransliteration,
-            name_audio         AS nameAudio,
-            meaning_english    AS meaningEnglish,
-            meaning_urdu       AS meaningUrdu,
-            meaning_short      AS meaningShort,
-            meaning_long       AS meaningLong,
-            benefit_english    AS benefitEnglish,
-            benefit_urdu       AS benefitUrdu,
-            verse_reference    AS verseReference
+            meaning_english      AS meaningEnglish,
+            meaning_urdu         AS meaningUrdu,
+            meaning_short        AS meaningShort,
+            meaning_long         AS meaningLong,
+            benefit_english      AS benefitEnglish,
+            benefit_urdu         AS benefitUrdu,
+            verse_reference      AS verseReference
         FROM names_allah
         ORDER BY id ASC
     ");
